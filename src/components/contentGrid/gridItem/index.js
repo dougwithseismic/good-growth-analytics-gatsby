@@ -5,7 +5,7 @@ import './gridItem.scss'
 
 const GridItem = ({ content: { subtitle, title, cta, readTime } }) => {
   return (
-    <Link to={`/article-template`}>
+    <Link to={`/article-template`} style={{ textDecoration: 'none' }}>
       <div className="grid-item">
         <div className="grid-text">
           <div className="grid-subtitle">{subtitle}</div>

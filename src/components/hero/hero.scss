@@ -1,12 +1,18 @@
 @media only screen {
   .hero {
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 30vh;
     margin: 64px 0 24px;
 
+    .hero-down-arrow {
+      position: absolute;
+      bottom: 0;
+      justify-self: flex-end;
+    }
   }
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */

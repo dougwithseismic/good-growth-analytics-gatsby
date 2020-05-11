@@ -1,35 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-}
-
 @media only screen {
-  section {
-    margin: auto;
-  }
-  .container {
+  .article-contents {
     display: flex;
-    max-width: 100%;
-  }
-
-  .fd-row {
-    flex-direction: row;
-  }
-
-  .fd-column {
     flex-direction: column;
-  }
-
-  .cta-button {
-    padding: 1em 2em;
-    border-radius: 2px;
-    margin: 2em 0;
-    font-family: DIN;
-    font-weight: 300;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
   }
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
@@ -37,10 +9,6 @@ body {
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
-  .container {
-    width: 35%;
-    align-self: center;
-  }
 } /* min-width 1025px, large screens */
 /* XLarge screens */
 @media only screen and (min-width: 90.063em) {

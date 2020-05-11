@@ -5,6 +5,9 @@ import Footer from './../components/footer'
 
 import ArticleHero from './../components/article/articleHero'
 import ArticleBody from './../components/article/articleBody'
+import ProductGrid from './../components/productGrid/index'
+
+import './article.scss'
 
 const article = (props) => {
   return (
@@ -12,8 +15,11 @@ const article = (props) => {
       <Navigation />
       <ArticleHero content={{ header: 'Enhanced Ecommerce 101' }} />
 
-      <div className="container fd-column">
-        <ArticleBody />
+      <div className="article-contents">
+        <div className="container fd-column">
+          <ArticleBody />
+          <ProductGrid />
+        </div>
       </div>
       <Footer />
     </Fragment>

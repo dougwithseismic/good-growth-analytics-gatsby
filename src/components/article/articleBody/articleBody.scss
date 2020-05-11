@@ -1,0 +1,78 @@
+@media only screen {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    text-align: left;
+
+    font-family: "DIN Next W1G";
+    font-weight: normal;
+
+
+    h1 {
+      font-family: DIN;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    h2 {
+      font-family: DIN;
+      font-weight: normal;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+      line-height: 46px;
+      color: #000;
+    }
+
+    h3 {
+      font-family: "DIN 2014";
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 18px;
+      color: #000;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+      color: #4e4e4e;
+    }
+
+    .article-quote {
+      position: relative;
+      font-family: "DIN Next W1G";
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #2e2e2e;
+      margin: 4em 0;
+
+      &::after {
+        content: '"';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        z-index: -99;
+        width: 53px;
+        font-weight: normal;
+        font-size: 164px;
+        color: #e1e1e1;
+      }
+    }
+  }
+} /* Define mobile styles - Mobile First */
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) {
+} /* min-width 641px, medium screens */
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) {
+} /* min-width 1025px, large screens */
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) {
+} /* min-width 1441px, xlarge screens */
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) {
+} /* min-width 1921px, xlarge screens */

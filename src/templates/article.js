@@ -16,7 +16,7 @@ const article = (props) => {
       <ArticleHero content={{ header: 'Enhanced Ecommerce 101' }} />
 
       <div className="article-contents">
-        <div className="container fd-column">
+        <div className="container">
           <ArticleBody />
           <ProductGrid />
         </div>

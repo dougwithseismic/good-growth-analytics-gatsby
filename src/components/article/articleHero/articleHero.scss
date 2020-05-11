@@ -7,9 +7,14 @@
     background-color: black;
     color: white;
 
+    .container {
+      max-width: 800px;
+    }
+
     .hero-content {
       margin: 2rem;
       text-transform: uppercase;
+      width: 100%;
 
       .article-hero-subtitle {
           margin-top: 64px;
@@ -48,6 +53,7 @@
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
+
 } /* min-width 1025px, large screens */
 /* XLarge screens */
 @media only screen and (min-width: 90.063em) {

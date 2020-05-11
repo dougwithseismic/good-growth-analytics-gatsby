@@ -7,7 +7,7 @@ import './navigation.scss'
 const Navigation = (props: PageProps) => {
   return (
     <nav className="navigation-bar">
-      <div className="container fd-row">
+      <div className="container">
         <div className="trial-cta">Start a 7day trial for £1</div>
         <div className="navigation-items">
           <div className="nav-item">...</div>

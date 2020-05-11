@@ -2,10 +2,8 @@
   .navigation-bar {
     position: absolute;
     top: 0;
-    right: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
 
     width: 100%;
@@ -46,12 +44,14 @@
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
+  .navigation-bar {
+    .container {
+      justify-content: flex-end;
+    }
+  }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
-  .navigation-bar {
-    justify-self: flex-end;
-  }
 
 } /* min-width 1025px, large screens */
 /* XLarge screens */

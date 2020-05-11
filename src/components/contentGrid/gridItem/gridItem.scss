@@ -9,7 +9,6 @@
     color: white;
     font-family: DIN;
     height: 344px;
-    width: 100%;
 
     border: solid 0.15px #0f0f0f;
 
@@ -43,6 +42,11 @@
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
+  .grid-item {
+    box-sizing: border-box;
+    min-height: 420px;
+
+  }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {

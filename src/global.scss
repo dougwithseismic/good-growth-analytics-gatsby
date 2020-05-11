@@ -11,6 +11,8 @@ body {
   .container {
     display: flex;
     max-width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .fd-row {
@@ -38,8 +40,10 @@ body {
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .container {
-    width: 35%;
-    align-self: center;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
   }
 } /* min-width 1025px, large screens */
 /* XLarge screens */

@@ -5,16 +5,14 @@ import './gridItem.scss'
 
 const GridItem = ({ content: { subtitle, title, cta, readTime } }) => {
   return (
-    <Link to={`/article-template`} style={{ textDecoration: 'none' }}>
-      <div className="grid-item">
-        <div className="grid-text">
-          <div className="grid-subtitle">{subtitle}</div>
-          <div className="grid-title">{title}</div>
-        </div>
-        <div className="grid-details">
-          <div className="grid-read-time">{readTime}</div>
-          <div className="grid-cta">{cta}</div>
-        </div>
+    <Link className="grid-item" to={`/article-template`} style={{ textDecoration: 'none' }}>
+      <div className="grid-text">
+        <div className="grid-subtitle">{subtitle}</div>
+        <div className="grid-title">{title}</div>
+      </div>
+      <div className="grid-details">
+        <div className="grid-read-time">{readTime}</div>
+        <div className="grid-cta">{cta}</div>
       </div>
     </Link>
   )

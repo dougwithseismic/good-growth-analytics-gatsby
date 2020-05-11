@@ -1,16 +1,32 @@
-@media only screen { 
-
-    .content-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
+@media only screen {
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+} /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
-@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+  .content-grid {
+    .grid-items {
+      display: grid;
+      box-sizing: border-box;
+
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(auto-fill, 1fr);
+      flex-direction: row;
+      column-gap: 0;
+      row-gap: 0;
+    }
+  }
+} /* min-width 1025px, large screens */
 /* XLarge screens */
-@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+} /* min-width 1441px, xlarge screens */
 /* XXLarge screens */
-@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {
+} /* min-width 1921px, xlarge screens */

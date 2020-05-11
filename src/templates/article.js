@@ -4,7 +4,7 @@ import Navigation from './../components/navigation'
 import Footer from './../components/footer'
 
 import ArticleHero from './../components/article/articleHero'
-import ArticleBody from './../components/article/ArticleBody'
+import ArticleBody from './../components/article/articleBody'
 
 const article = (props) => {
   return (

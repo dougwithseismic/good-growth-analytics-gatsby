@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './ContentGrid.scss'
+import './contentGrid.scss'
 import GridItem from './gridItem'
 
 const ContentGrid = (props) => {

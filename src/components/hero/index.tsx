@@ -14,12 +14,16 @@ const Hero = (props: PageProps) => {
         <div className="hero-image">
           <img src={ggaHero} alt="" />
         </div>
-        <h1 className="hero-header">This is a header too, but not a regular spiel.</h1>
+        <h1 className="hero-header">The alternative guide to Performance Marketing.</h1>
         <p className="hero-description">
-
-          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
-          will give you a complete account of the system, and expound the actual teachings of the great explorer of the
-          truth, the master-builder of human happiness.
+          A career in digital? Why bother. Join me on a brutally honest, anecdote-heavy journey through the ins-and-outs
+          as a performance marketer in an industry that lost its way. Practical guides on doing just enough to impress
+          stakeholders whilst keeping your sanity and salary intact, life lessons learned the hard way, and actual
+          advice you won't find anywhere else.
+        </p>
+        <p>
+          {' '}
+          <strong> P.S. Don't read this at work.</strong>
         </p>
         <img className="hero-down-arrow" src={downArrow} />
       </div>

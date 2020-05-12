@@ -4,6 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .swirl-image {
+      display: none;
+    }
   }
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
@@ -12,7 +16,10 @@
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .content-grid {
+    position: relative;
+
     .grid-items {
+
       display: grid;
       box-sizing: border-box;
 
@@ -21,7 +28,15 @@
       flex-direction: row;
       column-gap: 0;
       row-gap: 0;
-      
+    }
+          
+    .swirl-image {
+      display: flex;
+      position: absolute;
+      top: -20%; 
+      right: 150px;
+      z-index: -1;
+
     }
   }
 } /* min-width 1025px, large screens */

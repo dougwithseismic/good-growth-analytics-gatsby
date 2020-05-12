@@ -56,9 +56,19 @@
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .hero {
-    min-height: 30vh;
-
     .container {
+      min-height: 800px;
+      align-items: space-between;
+
+      .hero-header {
+        font-family: din-condensed, sans-serif;
+      }
+
+      .hero-down-arrow {
+        position: absolute;
+        bottom: 50px;
+      }
+
       h1 {
         font-weight: normal;
         font-size: 56px;
@@ -66,15 +76,15 @@
         line-height: 46px;
         margin: .5em;
       }
-  
+
       p {
         margin: .5em;
         max-width: 60%;
         font-size: 18px;
         line-height: 28px;
+        text-align: center;
+      }
     }
-    }
-
   }
 } /* min-width 1025px, large screens */
 /* XLarge screens */

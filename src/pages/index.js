@@ -12,7 +12,7 @@ const IndexPage = (props) => {
       <Navigation />
       <Hero />
       <ContentGrid />
-      <ProductGrid />
+      {/* <ProductGrid /> */}
       <Footer />
     </React.Fragment>
   )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { PageProps } from 'gatsby'
+import whiteLogo from '../../images/WHITE_TRANS_H@2x.svg'
 
 import './navigation.scss'
 
@@ -21,45 +22,16 @@ const Navigation = (props: PageProps) => {
         <div className={`navigation-menu${isMenuOpen ? ' menu-open' : ''}`}>
           <div className="menu-content">
             <div className="container">
-
               <hgroup>
                 <h3>Menu</h3>
-                <h3>01. Articles</h3>
-                <h3>02. How To Guides</h3>
-                <h3>03. Training</h3>
+                <h1>01. Articles</h1>
+                <h1>02. How To Guides</h1>
+                <h1>03. Training</h1>
               </hgroup>
 
-              <p>
-                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born
-                and I will give you a complete account of the system, and expound the actual teachings of the great
-                explorer of the truth, the master-builder of human happiness.
-              </p>
-              <p>
-                No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do
-                not know how to pursue pleasure rationally encounter consequences that are extremely painful.{' '}
-              </p>
-              <h3>Header Three</h3>
-              <p>
-                Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
-                To take a trivial. But I must explain to you how all this mistaken idea of denouncing pleasure and
-                praising pain was born and I will give you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the master-builder of human happiness.
-              </p>
-              <p>
-                Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
-                To take a trivial. But I must explain to you how all this mistaken idea of denouncing pleasure and
-                praising pain was born and I will give you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the master-builder of human happiness.
-              </p>
-              <p>
-                Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
-                To take a trivial. But I must explain to you how all this mistaken idea of denouncing pleasure and
-                praising pain was born and I will give you a complete account of the system, and expound the actual
-                teachings of the great explorer of the truth, the master-builder of human happiness.
-              </p>
+              <div className="menu-footer">
+                <img className="footer-logo" src={whiteLogo} />
+              </div>
             </div>
           </div>
         </div>

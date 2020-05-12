@@ -25,7 +25,6 @@
       justify-content: center;
       align-items: center;
       padding: 0 2em;
-
     }
 
     .navigation-items {
@@ -39,7 +38,6 @@
       z-index: 999; //Above everything - 998 on the fullscreen menu
       text-transform: uppercase;
 
-
       &.menu-open {
         background-color: black;
       }
@@ -51,16 +49,18 @@
 
     .navigation-menu {
       display: none;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 100vmax;
+      bottom: 0;
+
       background-color: #ff1d1d;
       z-index: 998;
-      overflow-y: auto;
+      padding:  55px 2em;
+      overflow-x: hidden;
+      overflow-y: scroll;
 
-      padding: 55px 2em 2em 2em;
 
       &.menu-open {
         display: flex;
@@ -68,8 +68,12 @@
       }
 
       .menu-content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
         color: white;
-        margin-bottom: 250px;
+        height: 100%;
+
 
 
         p {
@@ -79,6 +83,26 @@
         .container {
           flex-direction: column;
           align-items: flex-start;
+          height: 100%;
+          justify-content: space-between;
+
+          hgroup {
+            text-transform: uppercase;
+            h1{
+              font-size: 36px;
+
+            }
+            h3 {
+              font-size: 16px;
+
+            }
+          }
+
+
+          .menu-footer {
+            justify-self: flex-end;
+            margin-bottom: 2em;
+          }
         }
       }
     }

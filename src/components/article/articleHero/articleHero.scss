@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: din-condensed, DIN, sans-serif;
+
 
     background-color: black;
     color: white;
@@ -21,13 +23,11 @@
 
       .article-hero-subtitle {
           margin-top: 64px;
-        font-family: "DIN 2014";
         font-weight: normal;
         font-size: 12px;
         max-width: 60%;
       }
       .article-hero-header {
-        font-family: DIN;
         font-weight: normal;
         font-size: 48px;
         line-height: 48px;
@@ -37,7 +37,6 @@
 
     .author-details {
       margin: 2rem;
-      font-family: "DIN Next W1G";
       text-transform: uppercase;
       font-size: 12px;
       width: 100%;

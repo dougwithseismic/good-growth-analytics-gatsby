@@ -4,7 +4,7 @@ import './articleHero.scss'
 const ArticleHero = ({ content: { header } }) => {
   return (
     <section className="article-hero">
-      <div className="container fd-column">
+      <div className="container">
         <div className="hero-content">
           <div className="article-hero-subtitle">Google Analytics</div>
           <div className="article-hero-header">{header}</div>

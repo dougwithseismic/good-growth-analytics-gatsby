@@ -10,7 +10,11 @@
     font-family: DIN;
     height: 344px;
 
-    border: solid 1px #f5f5f5;
+    border: solid 1px #0c0c0c;
+
+    &:nth-of-type(4) {
+      grid-column: 1 / span 2;
+    }
 
     .grid-text {
       padding: 2em;
@@ -45,7 +49,6 @@
   .grid-item {
     box-sizing: border-box;
     min-height: 420px;
-
   }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */

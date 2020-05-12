@@ -29,6 +29,30 @@ const ContentGrid = (props) => {
           />
           <GridItem
             content={{
+              subtitle: 'Ecommerce',
+              title: 'Escaping Growth Stagnancy',
+              cta: 'Learn More',
+              readTime: '7 Minute Read'
+            }}
+          />
+          <GridItem
+            content={{
+              subtitle: 'Ecommerce',
+              title: 'Escaping Growth Stagnancy',
+              cta: 'Learn More',
+              readTime: '7 Minute Read'
+            }}
+          />
+          <GridItem
+            content={{
+              subtitle: 'Analytics',
+              title: 'Enhanced Ecommerce 101',
+              cta: 'Learn More',
+              readTime: '5 Minute Read'
+            }}
+          />
+          <GridItem
+            content={{
               subtitle: 'Analytics',
               title: 'Enhanced Ecommerce 101',
               cta: 'Learn More',

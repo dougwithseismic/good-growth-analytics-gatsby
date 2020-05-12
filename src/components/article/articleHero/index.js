@@ -7,7 +7,7 @@ const ArticleHero = ({ content: { header } }) => {
       <div className="container">
         <div className="hero-content">
           <div className="article-hero-subtitle">Google Analytics</div>
-          <div className="article-hero-header">{header}</div>
+          <h1 className="article-hero-header">{header}</h1>
         </div>
         {/* Could be a separate component..? */}
         <div className="author-details">

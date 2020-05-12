@@ -4,7 +4,7 @@ import './footer.scss'
 import GGALogo from '../../images/WHITE_TRANS_H@2x.svg'
 import { Link } from 'gatsby'
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <section className="footer">
       <Link to="/">

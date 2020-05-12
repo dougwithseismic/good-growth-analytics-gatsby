@@ -2,10 +2,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  font-family: din-condensed, din;
-  font-weight: normal;
-
+  font-family: din-2014, sans-serif;
+  font-display: optional;
+  font-weight: 400;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: din-condensed, sans-serif;
+}
+
 
 @media only screen {
   body {
@@ -30,9 +35,17 @@ body {
 
     p {
       font-size: 16px;
-      line-height: 32px;
-      font-weight: 300;
+      line-height: 24px;
       text-align: justify;
+      color: #727272;
+    }
+
+    ul {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: justify;
+      color: #000000;
+
     }
   }
 

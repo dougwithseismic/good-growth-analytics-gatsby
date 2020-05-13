@@ -47,13 +47,19 @@ const Hero = (props) => {
       <motion.div className="container" ref={contentRef} animate={animation} initial="hidden" variants={variantControl}>
         <motion.div className="hero-content">
           <motion.h1 className="hero-header" variants={variantControl}>
-            The alternative guide to Performance Marketing.
+            Life in Performance Marketing sucks.
           </motion.h1>
           <motion.p className="hero-description" variants={variantControl}>
-            A career in digital? Why bother. Join me on a brutally honest, anecdote-heavy journey through the
-            ins-and-outs as a performance marketer in an industry that lost its way. Practical guides on doing just
-            enough to impress stakeholders whilst keeping your sanity and salary intact, life lessons learned the hard
-            way, and the actual advice others won't dare tell you.
+            On top of the world one day, and nursing a KPI-induced hangover the next. Everything going to plan
+            perfectly, only to unfold and fall apart in all its gorey glory just when things matter the most. Being so
+            closely tied to success (and failure) opens us up to all the highs & lows, plasters, sores and shortcomings
+            that make a career in digital so painfully addictive - especially as we're all just winging it anyway.
+          </motion.p>
+
+          <motion.p variants={variantControl}>
+            Put aside the fire extinguisher, set your status to away and forget everything you've learned so far - Let
+            me teach you everything you <strong>really</strong> need to know. This is the alternative guide to
+            Performance Marketing.
           </motion.p>
           <motion.p variants={variantControl}>
             <strong> P.S. Don't read this at work.</strong>

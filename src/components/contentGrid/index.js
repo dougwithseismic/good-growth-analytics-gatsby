@@ -1,8 +1,9 @@
-import React from 'react'
-import './contentGrid.scss'
-import GridItem from './gridItem'
+import React, { useRef } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import GridItem from './gridItem'
 import Img from 'gatsby-image'
+
+import './contentGrid.scss'
 
 const ContentGrid = (props) => {
   const data = useStaticQuery(graphql`
@@ -17,13 +18,10 @@ const ContentGrid = (props) => {
     }
   `)
 
-  console.log('data :>> ', data)
   return (
     <section className="content-grid">
-
       <div className="container">
-
-      <Img
+        <Img
           className="swirl-image"
           fluid={data.file.childImageSharp.fluid}
           alt="The Good Growth Analytics Swirl"

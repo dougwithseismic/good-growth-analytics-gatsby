@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageProps, Link } from 'gatsby'
+import {  Link } from 'gatsby'
 
 import './gridItem.scss'
 

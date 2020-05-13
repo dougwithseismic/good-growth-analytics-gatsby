@@ -20,17 +20,56 @@ const Navigation = (props) => {
 
   const variantControl = {
     open: {
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [ 0.6, 0.05, -0.01, 0.9 ]
+      }
+    },
+    closed: {
+      y: '-100%',
+      transition: {
+        duration: 1,
+        ease: [ 0.6, 0.05, -0.01, 0.9 ]
+      }
+    }
+  }
+
+  const itemControl = {
+    open: {
+      opacity: 1,
+      y: 0,
       x: 0,
+      transition: {
+        duration: 1.2,
+        ease: [ 0.6, 0.05, -0.01, 0.9 ],
+        staggerChildren: 0.1
+      }
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.6,
+        ease: [ 0.6, 0.05, -0.01, 0.9 ],
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemChildren = {
+    open: {
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 1,
         ease: [ 0.6, 0.05, -0.01, 0.9 ]
       }
     },
     closed: {
-      x: '-100%',
+      opacity: 0,
+      y: -12,
       transition: {
-        duration: 1,
-        ease: [ 0.6, 0.05, -0.01, 0.9 ]
+        duration: 0.2
       }
     }
   }
@@ -55,19 +94,35 @@ const Navigation = (props) => {
         >
           <div className="menu-content">
             <div className="container">
-              <hgroup>
-                <h3>Menu</h3>
-                <h1>01. Articles</h1>
-                <h1>02. How To Guides</h1>
-                <h1>03. Training</h1>
-              </hgroup>
+              <motion.hgroup animate={animation} variants={itemControl}>
+                <motion.h3 variants={itemChildren}>Menu</motion.h3>
+                <motion.h1 variants={itemChildren}>01. Articles</motion.h1>
+                <motion.h1 variants={itemChildren}>02. How To Guides</motion.h1>
+                <motion.h1 variants={itemChildren}>03. Training</motion.h1>
+              </motion.hgroup>
 
-              <div className="menu-footer">
+              <motion.div className="menu-footer">
                 <img className="footer-logo" src={whiteLogo} />
-              </div>
+              </motion.div>
             </div>
           </div>
         </motion.div>
+        <motion.div
+          className={`navigation-overlay${isMenuOpen ? ' menu-open' : ''}`}
+          animate={animation}
+          initial="closed"
+          variants={{
+            open: {
+              opacity: 0.95
+            },
+
+            closed: {
+              opacity: 0,
+              transition: { delay: .2 }
+            }
+          }}
+          onClick={() => setIsMenuOpen(false)}
+        />
       </div>
     </nav>
   )

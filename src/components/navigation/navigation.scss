@@ -52,13 +52,12 @@
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
       bottom: 0;
+      width: 100vw;
 
       background-color: #ff1d1d;
       z-index: 998;
-      padding:  55px 2em;
-
+      padding: 55px 2em;
 
       &.menu-open {
         pointer-events: visibleFill;
@@ -73,8 +72,6 @@
         color: white;
         height: 100%;
 
-
-
         p {
           line-height: 1.5rem;
         }
@@ -87,16 +84,13 @@
 
           hgroup {
             text-transform: uppercase;
-            h1{
+            h1 {
               font-size: 36px;
-
             }
             h3 {
               font-size: 16px;
-
             }
           }
-
 
           .menu-footer {
             justify-self: flex-end;
@@ -109,14 +103,34 @@
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
-  .navigation-bar {
-    .container {
-      justify-content: flex-end;
-    }
-  }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
+  .navigation-bar {
+    position: relative;
+    .container {
+      justify-content: flex-end;
+    }
+
+    .navigation-menu {
+      bottom: inherit;
+    }
+  }
+
+  .navigation-overlay {
+    pointer-events: none;
+
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.menu-open {
+      pointer-events: inherit;
+    }
+  }
 } /* min-width 1025px, large screens */
 /* XLarge screens */
 @media only screen and (min-width: 90.063em) {

@@ -43,11 +43,12 @@
 
       .nav-item {
         padding: 2em;
+        cursor: pointer;
       }
     }
 
     .navigation-menu {
-      display: none;
+      pointer-events: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -57,12 +58,11 @@
       background-color: #ff1d1d;
       z-index: 998;
       padding:  55px 2em;
-      overflow-x: hidden;
-      overflow-y: scroll;
 
 
       &.menu-open {
-        display: flex;
+        pointer-events: visibleFill;
+
         flex-direction: column;
       }
 

@@ -68,8 +68,7 @@ const Hero = (props) => {
             }}
             transition={{
               loop: Infinity,
-              duration: 1.5,
-              ease: [ 0.6, 0.05, -0.01, 0.9 ]
+              duration: 1.5
             }}
           />
         </motion.div>

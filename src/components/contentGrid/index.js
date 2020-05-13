@@ -1,18 +1,42 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './contentGrid.scss'
 import GridItem from './gridItem'
-
-import imageimage from '../../images/hero-swirl.png'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 const ContentGrid = (props) => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "hero-swirl.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, quality: 75) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  console.log('data :>> ', data)
   return (
     <section className="content-grid">
       <div className="container">
-        <img className="swirl-image" src={imageimage} alt="The Good Growth Analytics Swirl" />
+        <Img
+          className="swirl-image"
+          fluid={data.file.childImageSharp.fluid}
+          alt="The Good Growth Analytics Swirl"
+          style={{ position: 'absolute' }}
+          fadeIn={false}
+        />
+
         <div className="grid-items">
           <GridItem
-            content={{ subtitle: 'Clients', title: 'Handling Trainwreck Calls', cta: 'Choke less', readTime: '15 Minute Read' }}
+            content={{
+              subtitle: 'Clients',
+              title: 'Handling Trainwreck Calls',
+              cta: 'Choke less',
+              readTime: '15 Minute Read'
+            }}
           />
           <GridItem
             content={{

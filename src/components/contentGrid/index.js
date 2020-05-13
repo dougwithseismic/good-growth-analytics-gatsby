@@ -9,8 +9,8 @@ const ContentGrid = (props) => {
     query {
       file(relativePath: { eq: "hero-swirl.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 75) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 800, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

@@ -16,8 +16,8 @@ const Hero = (props: PageProps) => {
         <p className="hero-description">
           A career in digital? Why bother. Join me on a brutally honest, anecdote-heavy journey through the ins-and-outs
           as a performance marketer in an industry that lost its way. Practical guides on doing just enough to impress
-          stakeholders whilst keeping your sanity and salary intact, life lessons learned the hard way, and actual
-          advice you won't find anywhere else.
+          stakeholders whilst keeping your sanity and salary intact, life lessons learned the hard way, and the actual
+          advice others won't dare tell you.
         </p>
         <p>
           {' '}

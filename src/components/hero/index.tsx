@@ -11,9 +11,7 @@ const Hero = (props: PageProps) => {
   return (
     <section className="hero">
       <div className="container">
-        <div className="hero-image">
-          <img src={ggaHero} alt="" />
-        </div>
+
         <h1 className="hero-header">The alternative guide to Performance Marketing.</h1>
         <p className="hero-description">
           A career in digital? Why bother. Join me on a brutally honest, anecdote-heavy journey through the ins-and-outs

@@ -21,7 +21,8 @@ module.exports = {
         // The option defaults to true
         checkSupportedExtensions: false
       }
-    }`gatsby-plugin-sharp`,
+    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

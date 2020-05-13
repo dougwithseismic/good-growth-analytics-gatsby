@@ -20,8 +20,10 @@ const ContentGrid = (props) => {
   console.log('data :>> ', data)
   return (
     <section className="content-grid">
+
       <div className="container">
-        <Img
+
+      <Img
           className="swirl-image"
           fluid={data.file.childImageSharp.fluid}
           alt="The Good Growth Analytics Swirl"

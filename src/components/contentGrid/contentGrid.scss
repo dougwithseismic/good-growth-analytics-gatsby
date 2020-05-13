@@ -12,32 +12,33 @@
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
+
+
+
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .content-grid {
-    position: relative;
+    .container {
+      position: relative;
 
-    .grid-items {
+      .grid-items {
+        display: grid;
 
-      display: grid;
-      box-sizing: border-box;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        flex-direction: row;
+        column-gap: 0;
+        row-gap: 0;
+      }
 
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(auto-fill, 1fr);
-      flex-direction: row;
-      column-gap: 0;
-      row-gap: 0;
-    }
-          
-    .swirl-image {
-      display: flex;
-      position: absolute;
-      top: -20%; 
-      right: 150px;
-      z-index: -1;
-      width: 800px
-
+      .swirl-image {
+        display: flex;
+        z-index: -1;
+        width: 1000px;
+        top: -200px;
+        right: -400px;
+      }
     }
   }
 } /* min-width 1025px, large screens */

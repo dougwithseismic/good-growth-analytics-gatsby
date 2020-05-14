@@ -8,9 +8,7 @@ import Layout from './../components/layout';
 
 const articleTemplate = (props) => {
   return (
-    <Layout>
       <Article />
-    </Layout>
   )
 }
 

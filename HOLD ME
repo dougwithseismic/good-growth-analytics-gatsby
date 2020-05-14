@@ -1,0 +1,27 @@
+export const pageQuery = graphql`
+  query ArticleBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    gcms {
+      author(where: { slug: $slug }) {
+        id
+        name
+        slug
+        stage
+        bio {
+          raw
+        }
+        articles {
+          id
+          slug
+          title
+          updatedAt
+        }
+      }
+    }
+  }
+`

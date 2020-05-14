@@ -39,7 +39,7 @@ const Hero = (props) => {
         staggerChildren: 0.1
       }
     },
-    hidden: { opacity: 0, y: 42 }
+    hidden: { opacity: 0, y: 8 }
   }
 
   return (

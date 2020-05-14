@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { PageProps } from 'gatsby'
 import { motion, useAnimation } from 'framer-motion'
+import { Link } from 'gatsby'
 
 import whiteLogo from '../../images/WHITE_TRANS_H@2x.svg'
 
@@ -13,7 +12,11 @@ const Navigation = (props) => {
 
   useEffect(
     () => {
-      animation.start(isMenuOpen ? 'open' : 'closed')
+      animation.start(
+
+          isMenuOpen ? 'open' :
+          'closed'
+      )
     },
     [ isMenuOpen ]
   )
@@ -23,16 +26,16 @@ const Navigation = (props) => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [ 0.6, 0.05, -0.01, 0.9 ]
-      }
+        ease: [ 0.6, 0.05, -0.2, 0.9 ],
+      },
     },
     closed: {
-      y: '-100%',
+      y: '-101%',
       transition: {
         duration: 1,
-        ease: [ 0.6, 0.05, -0.01, 0.9 ]
-      }
-    }
+        ease: [ 0.6, 0.05, -0.2, 0.9 ],
+      },
+    },
   }
 
   const itemControl = {
@@ -43,17 +46,17 @@ const Navigation = (props) => {
       transition: {
         duration: 1.2,
         ease: [ 0.6, 0.05, -0.01, 0.9 ],
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.1,
+      },
     },
     closed: {
       opacity: 0,
       transition: {
         duration: 0.6,
         ease: [ 0.6, 0.05, -0.01, 0.9 ],
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   }
 
   const itemChildren = {
@@ -62,35 +65,46 @@ const Navigation = (props) => {
       y: 0,
       transition: {
         duration: 1,
-        ease: [ 0.6, 0.05, -0.01, 0.9 ]
-      }
+        ease: [ 0.6, 0.05, -0.01, 0.9 ],
+      },
     },
     closed: {
       opacity: 0,
       y: -12,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.5,
+      },
+    },
   }
 
   return (
-    <nav className="navigation-bar">
+    <motion.nav className="navigation-bar">
       <div className="container">
         <div className="trial-cta">Start a 7day trial for £1</div>
-        <div className={`navigation-items${isMenuOpen ? ' menu-open' : ''}`}>
-          <div className="nav-item">...</div>
+        <div
+          className={`navigation-items${
+            isMenuOpen ? ' menu-open' :
+            ''}`}
+        >
+          <Link to="/" className="nav-item">
+            Home
+          </Link>
+          <Link to="/article-template" className="nav-item">
+            Article
+          </Link>
           <div className="nav-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             Menu
           </div>
         </div>
         {/* Fullscreen Menu */}
         <motion.div
-          className={`navigation-menu${isMenuOpen ? ' menu-open' : ''}`}
+          className={`navigation-menu${
+            isMenuOpen ? ' menu-open' :
+            ''}`}
           animate={animation}
           initial="closed"
           variants={variantControl}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transition: { duration: 1 } }}
         >
           <div className="menu-content">
             <div className="container">
@@ -108,23 +122,25 @@ const Navigation = (props) => {
           </div>
         </motion.div>
         <motion.div
-          className={`navigation-overlay${isMenuOpen ? ' menu-open' : ''}`}
+          className={`navigation-overlay${
+            isMenuOpen ? ' menu-open' :
+            ''}`}
           animate={animation}
           initial="closed"
           variants={{
             open: {
-              opacity: 0.95
+              opacity: 0.95,
             },
 
             closed: {
               opacity: 0,
-              transition: { delay: .2 }
-            }
+              transition: { delay: 0.2 },
+            },
           }}
           onClick={() => setIsMenuOpen(false)}
         />
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

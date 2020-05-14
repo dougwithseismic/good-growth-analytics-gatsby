@@ -23,7 +23,7 @@ const ClientGrid = (props) => {
   return (
     <section className="client-grid">
       <div className="container">
-        <h3>CLIENTS</h3>
+        <h3>Previous Work</h3>
         <div className="client-logo-grid">
           {data.allFile.nodes.map((image) => (
             <Img className="client-logo" fluid={image.childImageSharp.fluid} alt="Client Logos" />

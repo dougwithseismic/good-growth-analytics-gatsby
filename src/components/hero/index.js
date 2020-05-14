@@ -13,7 +13,7 @@ import './hero.scss'
 const Hero = (props) => {
   const animation = useAnimation()
   const [ contentRef, inView ] = useInView({
-    triggerOnce: true
+    // triggerOnce: true
   })
 
   useEffect(
@@ -21,6 +21,9 @@ const Hero = (props) => {
       if (inView) {
         console.log('gogoggo')
         animation.start('visible')
+      } else {
+        animation.start('hidden')
+
       }
     },
     [ animation, inView ]
@@ -62,7 +65,7 @@ const Hero = (props) => {
             Performance Marketing.
           </motion.p>
           <motion.p variants={variantControl}>
-            <strong> P.S. Don't read this at work.</strong>
+            <strong> P.S. Whatever you do, don't read this at work.</strong>
           </motion.p>
           <motion.img
             className="hero-down-arrow"

@@ -12,9 +12,11 @@ import './hero.scss'
 
 const Hero = (props) => {
   const animation = useAnimation()
-  const [ contentRef, inView ] = useInView({
-    // triggerOnce: true
-  })
+  const [ contentRef, inView ] = useInView(
+    {
+      // triggerOnce: true
+    }
+  )
 
   useEffect(
     () => {
@@ -23,7 +25,6 @@ const Hero = (props) => {
         animation.start('visible')
       } else {
         animation.start('hidden')
-
       }
     },
     [ animation, inView ]
@@ -39,10 +40,10 @@ const Hero = (props) => {
         duration: 0.8,
         ease: [ 0.6, 0.05, -0.01, 0.9 ],
 
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.3,
+      },
     },
-    hidden: { opacity: 0, y: 8 }
+    hidden: { opacity: 0, y: 8 },
   }
 
   return (
@@ -50,7 +51,7 @@ const Hero = (props) => {
       <motion.div className="container" ref={contentRef} animate={animation} initial="hidden" variants={variantControl}>
         <motion.div className="hero-content">
           <motion.h1 className="hero-header" variants={variantControl}>
-            Life in Performance Marketing sucks.
+          This is a header too, but not your regular spiel.
           </motion.h1>
           <motion.p className="hero-description" variants={variantControl}>
             On top of the world one day, and nursing a KPI-induced hangover the next. Everything going to plan
@@ -72,12 +73,12 @@ const Hero = (props) => {
             src={downArrow}
             animate={{
               opacity: [ 1, 0 ],
-              y: [ -42, 0 ],
-              opacity: [ 0, 1 ]
+              y: [ -20, 0 ],
+              opacity: [ 0, 1 ],
             }}
             transition={{
               loop: Infinity,
-              duration: 1.5
+              duration: 2,
             }}
           />
         </motion.div>

@@ -79,67 +79,67 @@ const Navigation = (props) => {
 
   return (
     <motion.nav className="navigation-bar">
-      <div className="container">
-        <div className="trial-cta">Start a 7day trial for £1</div>
-        <div
-          className={`navigation-items${
-            isMenuOpen ? ' menu-open' :
-            ''}`}
-        >
-          <Link to="/" className="nav-item">
-            Home
-          </Link>
-          <Link to="/article-template" className="nav-item">
-            Article
-          </Link>
-          <div className="nav-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            Menu
+      {/* <div className="container"> */}
+      <div className="trial-cta">Start a 7day trial for £1</div>
+      <div
+        className={`navigation-items${
+          isMenuOpen ? ' menu-open' :
+          ''}`}
+      >
+        <Link to="/" className="nav-item">
+          Home
+        </Link>
+        <Link to="/article-template" className="nav-item">
+          Article
+        </Link>
+        <div className="nav-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          Menu
+        </div>
+      </div>
+      {/* Fullscreen Menu */}
+      <motion.div
+        className={`navigation-menu${
+          isMenuOpen ? ' menu-open' :
+          ''}`}
+        animate={animation}
+        initial="closed"
+        variants={variantControl}
+        exit={{ opacity: 0, transition: { duration: 1 } }}
+      >
+        <div className="menu-content">
+          <div className="container">
+            <motion.hgroup animate={animation} variants={itemControl}>
+              <motion.h3 variants={itemChildren}>Menu</motion.h3>
+              <motion.h1 variants={itemChildren}>01. Articles</motion.h1>
+              <motion.h1 variants={itemChildren}>02. How To Guides</motion.h1>
+              <motion.h1 variants={itemChildren}>03. Training</motion.h1>
+            </motion.hgroup>
+
+            <motion.div className="menu-footer">
+              <img className="footer-logo" src={whiteLogo} />
+            </motion.div>
           </div>
         </div>
-        {/* Fullscreen Menu */}
-        <motion.div
-          className={`navigation-menu${
-            isMenuOpen ? ' menu-open' :
-            ''}`}
-          animate={animation}
-          initial="closed"
-          variants={variantControl}
-          exit={{ opacity: 0, transition: { duration: 1 } }}
-        >
-          <div className="menu-content">
-            <div className="container">
-              <motion.hgroup animate={animation} variants={itemControl}>
-                <motion.h3 variants={itemChildren}>Menu</motion.h3>
-                <motion.h1 variants={itemChildren}>01. Articles</motion.h1>
-                <motion.h1 variants={itemChildren}>02. How To Guides</motion.h1>
-                <motion.h1 variants={itemChildren}>03. Training</motion.h1>
-              </motion.hgroup>
+      </motion.div>
+      <motion.div
+        className={`navigation-overlay${
+          isMenuOpen ? ' menu-open' :
+          ''}`}
+        animate={animation}
+        initial="closed"
+        variants={{
+          open: {
+            opacity: 0.95,
+          },
 
-              <motion.div className="menu-footer">
-                <img className="footer-logo" src={whiteLogo} />
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className={`navigation-overlay${
-            isMenuOpen ? ' menu-open' :
-            ''}`}
-          animate={animation}
-          initial="closed"
-          variants={{
-            open: {
-              opacity: 0.95,
-            },
-
-            closed: {
-              opacity: 0,
-              transition: { delay: 0.2 },
-            },
-          }}
-          onClick={() => setIsMenuOpen(false)}
-        />
-      </div>
+          closed: {
+            opacity: 0,
+            transition: { delay: 0.2 },
+          },
+        }}
+        onClick={() => setIsMenuOpen(false)}
+      />
+      {/* </div> */}
     </motion.nav>
   )
 }

@@ -1,0 +1,97 @@
+@media only screen {
+  .jumbo.container {
+    font-family: din-2014, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    justify-content: flex-start;
+
+    span {
+      font-size: 48px;
+      font-weight: 800;
+    }
+  }
+
+  .newsletter-signup {
+    padding: 1em;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .newsletter-content {
+        h2 {
+        }
+
+        p {
+        }
+
+        .newsletter-action {
+          display: inline-flex;
+          justify-items: center;
+          width: 100%;
+
+          margin: 1em 0;
+
+          input[type="text"] {
+            display: inline-flex;
+            flex: 1;
+            padding: .5em 1em;
+            border-radius: 5px;
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 15px;
+            border-radius: 5px 0 0 5px;
+          }
+
+          .submit-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            background-color: red;
+            color: white;
+            border-radius: 0 5px 5px 0;
+          }
+        }
+      }
+    }
+  }
+} /* Define mobile styles - Mobile First */
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) {
+} /* min-width 641px, medium screens */
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) {
+  .newsletter-signup {
+    .container {
+      display: flex;
+      flex-direction: column;
+      .newsletter-content {
+        max-width: 60%;
+
+        p {
+          max-width: 80%;
+        }
+
+        .newsletter-action {
+          input[type="text"] {
+            flex: 0;
+          }
+        }
+
+        h2 {
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+} /* min-width 1025px, large screens */
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) {
+} /* min-width 1441px, xlarge screens */
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) {
+} /* min-width 1921px, xlarge screens */

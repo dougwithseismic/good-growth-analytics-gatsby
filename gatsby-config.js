@@ -12,6 +12,37 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cache`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map((edge) => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 1,
+            }
+          }),
+      },
+    },
     {
       resolve: 'gatsby-source-graphql',
       options: {
@@ -56,7 +87,31 @@ module.exports = {
           id: 'hkk7jbn',
         },
       },
-    }, // this (optional) plugin enables Progressive Web App + Offline functionality
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.dougsilkstone.com`,
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-111111',
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
+
+    // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],

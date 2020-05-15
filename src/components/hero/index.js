@@ -51,7 +51,7 @@ const Hero = (props) => {
       <motion.div className="container" ref={contentRef} animate={animation} initial="hidden" variants={variantControl}>
         <motion.div className="hero-content">
           <motion.h1 className="hero-header" variants={variantControl}>
-          Every brand should have a digital leader - Who is yours?
+            Bold, empowering header that sets an aspirational, welcoming tone.
           </motion.h1>
 
           <motion.p variants={variantControl}>

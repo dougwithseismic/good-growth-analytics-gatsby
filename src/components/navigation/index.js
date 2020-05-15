@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { Link } from 'gatsby'
 
-import whiteLogo from '../../images/WHITE_TRANS_H@2x.svg'
-
 import './navigation.scss'
 
 const Navigation = (props) => {
@@ -12,11 +10,7 @@ const Navigation = (props) => {
 
   useEffect(
     () => {
-      animation.start(
-
-          isMenuOpen ? 'open' :
-          'closed'
-      )
+      animation.start(isMenuOpen ? 'open' : 'closed')
     },
     [ isMenuOpen ]
   )
@@ -81,11 +75,7 @@ const Navigation = (props) => {
     <motion.nav className="navigation-bar">
       {/* <div className="container"> */}
       <div className="trial-cta">Start a 7day trial for £1</div>
-      <div
-        className={`navigation-items${
-          isMenuOpen ? ' menu-open' :
-          ''}`}
-      >
+      <div className={`navigation-items${isMenuOpen ? ' menu-open' : ''}`}>
         {/* <Link to="/" className="nav-item">
           Home
         </Link>
@@ -98,9 +88,7 @@ const Navigation = (props) => {
       </div>
       {/* Fullscreen Menu */}
       <motion.div
-        className={`navigation-menu${
-          isMenuOpen ? ' menu-open' :
-          ''}`}
+        className={`navigation-menu${isMenuOpen ? ' menu-open' : ''}`}
         animate={animation}
         initial="closed"
         variants={variantControl}
@@ -115,15 +103,12 @@ const Navigation = (props) => {
               <motion.h1 variants={itemChildren}>03. Training</motion.h1>
             </motion.hgroup>
 
-            <motion.div className="menu-footer">
-            </motion.div>
+            <motion.div className="menu-footer" />
           </div>
         </div>
       </motion.div>
       <motion.div
-        className={`navigation-overlay${
-          isMenuOpen ? ' menu-open' :
-          ''}`}
+        className={`navigation-overlay${isMenuOpen ? ' menu-open' : ''}`}
         animate={animation}
         initial="closed"
         variants={{

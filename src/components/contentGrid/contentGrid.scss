@@ -5,16 +5,37 @@
     justify-content: center;
     align-items: center;
 
+    .container {
+      position: relative;
+
+      .grid-items {
+        width: 100%;
+      }
+    }
     .swirl-image {
-      display: none;
+      display: flex;
+      z-index: -99;
+      width: 800px;
+      top: -150px;
+      right: -150px;
     }
   }
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
+  .content-grid {
+    .container {
+      width: 100%;
+    }
+  }
 
-
-
+  .swirl-image {
+    display: flex;
+    z-index: -99;
+    width: 1000px;
+    top: -150px;
+    right: -150px;
+  }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
@@ -30,7 +51,7 @@
         flex-direction: row;
         column-gap: 0;
         row-gap: 0;
-        margin:  0 0 3em 0;
+        margin: 0 0 3em 0;
       }
 
       .swirl-image {

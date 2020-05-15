@@ -86,12 +86,12 @@ const Navigation = (props) => {
           isMenuOpen ? ' menu-open' :
           ''}`}
       >
-        <Link to="/" className="nav-item">
+        {/* <Link to="/" className="nav-item">
           Home
         </Link>
         <Link to="/article-template" className="nav-item">
           Article
-        </Link>
+        </Link> */}
         <div className="nav-item" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           Menu
         </div>

@@ -51,14 +51,8 @@ const Hero = (props) => {
       <motion.div className="container" ref={contentRef} animate={animation} initial="hidden" variants={variantControl}>
         <motion.div className="hero-content">
           <motion.h1 className="hero-header" variants={variantControl}>
-          This is a header too, but not your regular spiel.
+          Every brand should have a digital leader - Who is yours?
           </motion.h1>
-          <motion.p className="hero-description" variants={variantControl}>
-            On top of the world one day, and nursing a KPI-induced hangover the next. Everything going to plan
-            perfectly, only to unfold and fall apart in all its gorey glory just when things matter the most. Being so
-            closely tied to success (and failure) opens us up to all the highs & lows, plasters, sores and shortcomings
-            that make a career in digital so painfully addictive - especially as we're all just winging it anyway.
-          </motion.p>
 
           <motion.p variants={variantControl}>
             Put aside the fire extinguisher, set your status to away and forget everything you've learned so far - Let

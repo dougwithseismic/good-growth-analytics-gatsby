@@ -10,11 +10,11 @@ const Footer = () => {
       <Link to="/">
         <img src={GGALogo} alt="The Good Growth Analytics Logo" />
       </Link>
-      <div className="footer-items">
+      {/* <div className="footer-items">
         <div className="footer-item">Articles</div>
         <div className="footer-item">Audit Guides</div>
         <div className="footer-item">Consulting</div>
-      </div>
+      </div> */}
     </section>
   )
 }

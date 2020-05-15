@@ -116,7 +116,6 @@ const Navigation = (props) => {
             </motion.hgroup>
 
             <motion.div className="menu-footer">
-              <img className="footer-logo" src={whiteLogo} />
             </motion.div>
           </div>
         </div>

@@ -23,7 +23,7 @@ const ClientGrid = (props) => {
   return (
     <section className="client-grid">
       <div className="container">
-        <h3>Client Roster</h3>
+        <h3>PREVIOUS WORK</h3>
         <div className="client-logo-grid">
           {data.allFile.nodes.map((image) => (
             <div className="client-logo">

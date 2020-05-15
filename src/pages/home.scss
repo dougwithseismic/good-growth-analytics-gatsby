@@ -1,12 +1,8 @@
 @media only screen {
-  .jumbo.container {
-    font-family: din-2014, Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    justify-content: flex-start;
-
-    span {
-      font-size: 48px;
-      font-weight: 800;
+  .about-info {
+    padding: 2em;
+    p {
+      text-align: left;
     }
   }
 
@@ -59,6 +55,20 @@
 } /* Define mobile styles - Mobile First */
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) {
+  .about-info {
+    .container {
+      .about-content {
+        margin: 128px;
+        h2 {
+          max-width: 60%;
+        }
+        p {
+          margin: 2em 0;
+          max-width: 60%;
+        }
+      }
+    }
+  }
 } /* min-width 641px, medium screens */
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {

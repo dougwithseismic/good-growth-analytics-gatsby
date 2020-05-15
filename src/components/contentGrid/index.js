@@ -21,6 +21,8 @@ const ContentGrid = (props) => {
   return (
     <section className="content-grid">
       <div className="container">
+        <h3>CASE STUDIES</h3>
+
         <Img
           className="swirl-image"
           fluid={data.file.childImageSharp.fluid}
@@ -35,7 +37,7 @@ const ContentGrid = (props) => {
               subtitle: 'Clients',
               title: 'Handling Trainwreck Calls',
               cta: 'Choke less',
-              readTime: '15 Minute Read'
+              readTime: '15 Minute Read',
             }}
           />
           <GridItem
@@ -43,7 +45,7 @@ const ContentGrid = (props) => {
               subtitle: 'Guide',
               title: `How To: Your first 60 days with a client`,
               cta: 'Learn More',
-              readTime: '22 Minute Read'
+              readTime: '22 Minute Read',
             }}
           />
           <GridItem
@@ -51,7 +53,7 @@ const ContentGrid = (props) => {
               subtitle: 'Reporting',
               title: `How to forecast properly and impress everyone`,
               cta: 'Learn More',
-              readTime: '5 Minute Read'
+              readTime: '5 Minute Read',
             }}
           />
           <GridItem
@@ -59,7 +61,7 @@ const ContentGrid = (props) => {
               subtitle: 'Outsourcing',
               title: 'Auditing your agency - The honest truth',
               cta: 'Learn More',
-              readTime: '20 Minute Read'
+              readTime: '20 Minute Read',
             }}
           />
           <GridItem
@@ -67,7 +69,7 @@ const ContentGrid = (props) => {
               subtitle: 'Client',
               title: 'Budget versus expectations',
               cta: 'Learn More',
-              readTime: '7 Minute Read'
+              readTime: '7 Minute Read',
             }}
           />
           {/* <GridItem

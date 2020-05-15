@@ -48,35 +48,7 @@ const Hero = (props) => {
 
   return (
     <section className="hero">
-      <motion.div className="container" ref={contentRef} animate={animation} initial="hidden" variants={variantControl}>
-        <motion.div className="hero-content">
-          <motion.h1 className="hero-header" variants={variantControl}>
-            Bold, empowering header that sets an aspirational, welcoming tone.
-          </motion.h1>
 
-          <motion.p variants={variantControl}>
-            Put aside the fire extinguisher, set your status to away and forget everything you've learned so far - Let
-            me teach you everything you <strong>really</strong> need to know. This is the alternative guide to
-            Performance Marketing.
-          </motion.p>
-          <motion.p variants={variantControl}>
-            <strong> P.S. Whatever you do, don't read this at work.</strong>
-          </motion.p>
-          <motion.img
-            className="hero-down-arrow"
-            src={downArrow}
-            animate={{
-              opacity: [ 1, 0 ],
-              y: [ -20, 0 ],
-              opacity: [ 0, 1 ],
-            }}
-            transition={{
-              loop: Infinity,
-              duration: 2,
-            }}
-          />
-        </motion.div>
-      </motion.div>
     </section>
   )
 }

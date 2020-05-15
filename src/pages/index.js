@@ -11,10 +11,10 @@ import ClientGrid from './../components/clientGrid/index'
 const IndexPage = (props) => {
   return (
     <Layout>
-      <Hero />
+      {/* <Hero /> */}
       {/* <div className=" jumbo container"> <span>Latest Content</span> </div> */}
-      <ContentGrid />
       <ClientGrid />
+      <ContentGrid />
       <NewsletterSignup>
         {({ onSignup }) => (
           <section className="newsletter-signup">

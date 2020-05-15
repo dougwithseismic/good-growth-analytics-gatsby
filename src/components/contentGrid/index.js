@@ -70,7 +70,7 @@ const ContentGrid = (props) => {
               readTime: '7 Minute Read'
             }}
           />
-          <GridItem
+          {/* <GridItem
             content={{
               subtitle: 'Analytics',
               title: 'Bin manual work & learn to automate',
@@ -93,7 +93,7 @@ const ContentGrid = (props) => {
               cta: 'Learn More',
               readTime: '12 Minute Read'
             }}
-          />
+          /> */}
         </div>
       </div>
     </section>

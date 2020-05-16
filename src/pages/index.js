@@ -24,7 +24,7 @@ const IndexPage = (props) => {
               <p>
                 Originally from Bristol UK, now living in the beautiful city of Prague, I've launched AR robots with
                 Apple, freed entire teams from dull, monotonous work, built tools and products to make marketer's lives
-                easier, Now I'm helping digital teams realise their true potential, and how to act on it.
+                easier. Now I'm helping digital teams realise their true potential, and how to act on it.
               </p>
               <p>
                 Brands talk to me when they're ready to take their digital setup seriously - I help them understand

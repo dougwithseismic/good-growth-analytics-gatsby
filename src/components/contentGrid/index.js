@@ -7,7 +7,29 @@ import './contentGrid.scss'
 
 const ContentGrid = (props) => {
   const data = useStaticQuery(graphql`
-    query {
+    query QueryFeaturesOnPage {
+      gcms {
+        page(where: { name: "Home" }) {
+          id
+          name
+          features {
+            id
+            name
+            stage
+            references {
+              ... on GCMS_Article {
+                id
+                slug
+                title
+              }
+              ... on GCMS_Author {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
       file(relativePath: { eq: "hero-swirl.png" }) {
         childImageSharp {
           fluid(maxWidth: 800, quality: 100) {
@@ -17,6 +39,7 @@ const ContentGrid = (props) => {
       }
     }
   `)
+  console.log('data :>> ', data)
 
   return (
     <section className="content-grid">
@@ -30,6 +53,17 @@ const ContentGrid = (props) => {
         />
 
         <div className="grid-items">
+          {data.gcms.page.features[0].references.map((article) => (
+            <GridItem
+              content={{
+                subtitle: 'ElephantBox',
+                title: `${article.title}`,
+                slug: article.slug,
+                cta: 'Choke less',
+                readTime: 'PPC, CRO',
+              }}
+            />
+          ))}
           <GridItem
             content={{
               subtitle: 'ElephantBox',

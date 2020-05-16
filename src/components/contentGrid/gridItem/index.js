@@ -4,14 +4,10 @@ import { motion, useAnimation } from 'framer-motion'
 
 import './gridItem.scss'
 
-const GridItem = ({ content: { subtitle, title, cta, readTime } }) => {
+const GridItem = ({ content: { slug, subtitle, title, cta, readTime } }) => {
   const AnimLink = motion.custom(Link)
   return (
-    <AnimLink
-      className="grid-item"
-      to={`/article-template`}
-      style={{ textDecoration: 'none' }}
-   >
+    <AnimLink className="grid-item" to={slug} style={{ textDecoration: 'none' }}>
       <motion.div className="grid-text">
         <motion.h3 className="grid-subtitle">{subtitle}</motion.h3>
         <motion.h1 className="grid-title">{title}</motion.h1>

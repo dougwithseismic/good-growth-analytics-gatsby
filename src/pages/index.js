@@ -15,7 +15,7 @@ const IndexPage = (props) => {
             <span className="flair">🥴 Digital acquisition & performance marketing</span>
             <h1 className="about-header">👊 Prepped for take-off?</h1>
             <span className="highlight">
-              I help brands to acquire more customers, cut out wasted marketing spend and understand their digital setup.
+              I help brands to acquire more customers, cut out wasted marketing spend and pilot them to digital-first success.
             </span>
           </div>
           <div className="extended-info">

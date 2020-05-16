@@ -103,11 +103,15 @@
       justify-content: flex-start;
       align-items: flex-start;
       .service-content {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         width: 100%;
-        h2 {
-          margin: 0;
+
+        .subheading {
+          margin-bottom: 1.2em;
+        }
+        .service-title {
+          margin: 0 2em 0 0;
           font-size: 24px;
         }
         .service-desc {
@@ -132,7 +136,7 @@
       align-items: flex-start;
 
       .about-content {
-        max-width: 50%;
+        max-width: 60%;
         margin-bottom: 2em;
 
         .about-header {

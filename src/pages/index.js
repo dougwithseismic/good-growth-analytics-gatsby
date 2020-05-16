@@ -13,9 +13,10 @@ const IndexPage = (props) => {
         <div className="container">
           <div className="about-content">
             <span className="flair">🥴 Digital acquisition & performance marketing</span>
-            <h1 className="about-header">👊 Prepped for take-off?</h1>
+            <h1 className="about-header">👊 No Nonsense Digital Direction.</h1>
             <span className="highlight">
-              I help brands to acquire more customers, cut out wasted marketing spend and fully understand their digital setup.
+              I help brands to acquire more customers, cut out wasted marketing spend and fully understand their digital
+              setup.
             </span>
           </div>
           <div className="extended-info">
@@ -44,8 +45,11 @@ const IndexPage = (props) => {
       <section className="services">
         <div className="container">
           <div className="service-content">
+            <span className="subheading" style={{ maxWidth: '15%' }}>
+              Helping brands with..
+            </span>
             <div className="service">
-              <h2 className="service-title">Acquisition</h2>
+              <span className="service-title highlight">Acquisition</span>
               <ul className="service-desc">
                 <li>Google Ads</li>
                 <li>Paid Social</li>
@@ -55,7 +59,7 @@ const IndexPage = (props) => {
             </div>
 
             <div className="service">
-              <h2 className="service-title">Development</h2>
+              <span className="service-title highlight">Development</span>
               <ul className="service-desc">
                 <li>Web Development (React)</li>
                 <li>Web Scraping</li>
@@ -65,7 +69,7 @@ const IndexPage = (props) => {
               </ul>
             </div>
             <div className="service">
-              <h2 className="service-title">Analytics & Data</h2>
+              <span className="service-title highlight">Analytics & Data</span>
               <ul className="service-desc">
                 <li>Analytics & Tracking</li>
                 <li>Data Pipeline Implementation</li>
@@ -73,6 +77,13 @@ const IndexPage = (props) => {
                 <li>Business Intelligence</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="fit-check">
+        <div className="jc-start container">
+          <div className="fit-check-content">
+            <span className="highlight">hello</span>
           </div>
         </div>
       </section>

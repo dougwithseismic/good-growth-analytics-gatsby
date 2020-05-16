@@ -69,6 +69,8 @@
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .client-grid {
+    margin: 128px 0;
+
     .container {
       align-items: flex-start;
     }

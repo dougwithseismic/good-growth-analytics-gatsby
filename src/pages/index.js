@@ -47,10 +47,10 @@ const IndexPage = (props) => {
             <div className="service">
               <h2 className="service-title">Acquisition</h2>
               <ul className="service-desc">
-                <li>Performance Marketing</li>
-                <li>Customer Acquisition</li>
+                <li>Google Ads</li>
+                <li>Paid Social</li>
+                <li>SEO Strategy</li>
                 <li>SEM Automation</li>
-                <li>Technical SEO</li>
               </ul>
             </div>
 

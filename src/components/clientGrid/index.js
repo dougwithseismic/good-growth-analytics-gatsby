@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 import './clientGrid.scss'
 
-const ClientGrid = (props) => {
+const ClientGrid = () => {
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { relativeDirectory: { eq: "clients" } }) {
@@ -23,11 +23,10 @@ const ClientGrid = (props) => {
   return (
     <section className="client-grid">
       <div className="container">
-        <h3>A few of the 100+ companies I've helped succeed in digital</h3>
+        <span className="highlight">A few of the companies I've helped succeed in digital</span>
         <div className="client-logo-grid">
           {data.allFile.nodes.map((image) => (
             <div className="client-logo">
-              {' '}
               <Img className="logo" fluid={image.childImageSharp.fluid} alt="Client Logos" />
             </div>
           ))}

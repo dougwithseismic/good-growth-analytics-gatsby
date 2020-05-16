@@ -12,27 +12,27 @@ const IndexPage = (props) => {
       <section className="about-info">
         <div className="container">
           <div className="about-content">
-            <span className="about-flair">🥴 Digital acquisition & performance</span>
-            <h1 className="about-header">👊 What a header!?</h1>
+            <span className="flair">🥴 Digital acquisition & performance marketing</span>
+            <h1 className="about-header">👊 Prepped for take-off?</h1>
             <span className="highlight">
-              A highly effective system for building and optimising digital products at speed. Growth-driven UX and UI
-              design for startups.
+              I help brands to acquire more customers, cut out wasted budget and understand their digital setup.
             </span>
           </div>
           <div className="extended-info">
-            <div className="vertical">
-            </div>
-
+            <div className="vertical">The blurb</div>
             <div className="extended-info-content">
               <p>
-                We’ve developed a unique design delivery framework that brings results in 5 weeks. It uses the
-                industry-proven methodologies Jobs to be Done, for identifying product flaws and opportunities, and
-                Design Sprint for solving and testing product problems.
+                Originally from Bristol UK, now living in the beautiful city of Prague, I've launched AR robots with
+                Apple, freed entire teams from dull, monotonous work, built tools and products to make marketer's lives
+                easier, Now I'm helping digital teams realise their true potential, and how to act on it.
               </p>
               <p>
-                This is an optimised and highly effective way of doing UX and UI design for early stage companies. It’s
-                based on our experience with over 100 startups, some of them backed by YC, Techstars, Seedcamp, Founders
-                Factory and other leading accelerators and investors.
+                Brands talk to me when they're ready to take their digital setup seriously - I help them understand
+                their current position, where they should be focusing, and how act on that information to make genuine
+                gains as fast as possible. <p />
+                <span className="highlight">
+                  Faster Growth, better returns, happier teams & smarter decisions - Interested?
+                </span>
               </p>
             </div>
           </div>
@@ -40,6 +40,7 @@ const IndexPage = (props) => {
       </section>
       <ContentGrid />
       <ClientGrid />
+
       <section className="services">
         <div className="container">
           <div className="service-content">

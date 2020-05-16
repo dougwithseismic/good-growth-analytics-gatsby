@@ -1,11 +1,12 @@
 @media only screen {
   .client-grid {
-    padding: 2em;
+    display: block;
+    padding: 0 2em;
     margin: 64px 0;
 
     .container {
-      flex-direction: column;
-      h3 {
+      display: block;
+      .highlight {
         line-height: 1.2em;
       }
     }
@@ -13,6 +14,8 @@
   .client-logo-grid {
     display: grid;
     width: 100%;
+    margin: 2em 0;
+
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
@@ -73,7 +76,7 @@
   .client-logo-grid {
     display: grid;
     width: 100%;
-    margin: 0 0 2em;
+    margin: 2em 0;
 
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);

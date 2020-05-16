@@ -29,6 +29,28 @@ span {
   font-family: itc-avant-garde-gothic-pro, sans-serif;
 }
 
+.highlight {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  font-weight: 700;
+  -moz-box-shadow: inset 0 -0.35em 0 #ffd30a;
+  -webkit-box-shadow: inset 0 -0.35em 0 #ffd30a;
+  box-shadow: inset 0 -0.35em 0 #ffd30a;
+  margin: 1em 0;
+}
+
+.flair {
+  font-family: sofia-pro, Arial, Helvetica, sans-serif;
+  font-size: .75em;
+  padding: 0.5em 0.5em;
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
 .cta-btn {
   background-color: $accent-color;
   color: white;

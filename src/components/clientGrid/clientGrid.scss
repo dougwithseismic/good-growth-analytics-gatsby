@@ -1,9 +1,13 @@
 @media only screen {
   .client-grid {
     padding: 2em;
+    margin: 64px 0;
 
     .container {
       flex-direction: column;
+      h3 {
+        line-height: 1.2em;
+      }
     }
   }
   .client-logo-grid {
@@ -48,7 +52,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
 
-
     border-right: 1px solid rgba(128, 128, 128, 0.219);
     border-bottom: 1px solid rgba(128, 128, 128, 0.219);
   }
@@ -63,7 +66,6 @@
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .client-grid {
-    margin: 0;
     .container {
       align-items: flex-start;
     }

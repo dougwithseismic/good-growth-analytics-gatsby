@@ -21,8 +21,6 @@ const ContentGrid = (props) => {
   return (
     <section className="content-grid">
       <div className="container">
-        <h3>CASE STUDIES</h3>
-
         <Img
           className="swirl-image"
           fluid={data.file.childImageSharp.fluid}
@@ -34,42 +32,42 @@ const ContentGrid = (props) => {
         <div className="grid-items">
           <GridItem
             content={{
-              subtitle: 'Clients',
-              title: 'Handling Trainwreck Calls',
+              subtitle: 'ElephantBox',
+              title: 'Unprofitable Ecommerce to 6x ROAS in less than a month',
               cta: 'Choke less',
-              readTime: '15 Minute Read',
+              readTime: 'PPC, CRO',
             }}
           />
           <GridItem
             content={{
-              subtitle: 'Guide',
-              title: `How To: Your first 60 days with a client`,
+              subtitle: 'The Beeswax Wrap Co.',
+              title: `Zero-waste winners - creating DTC Market leaders`,
               cta: 'Learn More',
-              readTime: '22 Minute Read',
+              readTime: 'Web, PPC, Strategy',
             }}
           />
           <GridItem
             content={{
-              subtitle: 'Reporting',
-              title: `How to forecast properly and impress everyone`,
+              subtitle: 'Topman',
+              title: `Most Creative Performance Marketing Campaign`,
               cta: 'Learn More',
-              readTime: '5 Minute Read',
+              readTime: 'Paid Social, Development, R&D',
             }}
           />
           <GridItem
             content={{
-              subtitle: 'Outsourcing',
-              title: 'Auditing your agency - The honest truth',
+              subtitle: 'The Donkey Sanctuary',
+              title: 'Uncovering an Analytics Emergency',
               cta: 'Learn More',
-              readTime: '20 Minute Read',
+              readTime: 'Analytics, GTM, Development',
             }}
           />
           <GridItem
             content={{
-              subtitle: 'Client',
-              title: 'Budget versus expectations',
+              subtitle: 'The Collective',
+              title: 'Creating a short-stay analytics success',
               cta: 'Learn More',
-              readTime: '7 Minute Read',
+              readTime: 'Analytics, Web',
             }}
           />
           {/* <GridItem

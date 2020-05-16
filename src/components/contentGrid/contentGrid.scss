@@ -9,17 +9,14 @@
       position: relative;
       flex-direction: column;
 
-      h3 {
-        display: none;
-        align-self: flex-start;
-      }
+
 
       .grid-items {
         width: 100%;
       }
     }
     .swirl-image {
-      display: flex;
+      display: none;
       z-index: -99;
       width: 800px;
       top: -150px;

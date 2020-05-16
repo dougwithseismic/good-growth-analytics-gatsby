@@ -1,3 +1,5 @@
+$accent-color: rgb(255, 30, 30);
+
 html {
   font-display: swap;
 }
@@ -10,27 +12,39 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  font-family: din-2014, sans-serif;
+  font-family: sofia-pro, sans-serif;
   font-weight: 400;
-  overflow-x: hidden
+  font-style: normal;
+  overflow-x: hidden;
+  color: rgb(0, 1, 15);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: din-condensed, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
 }
 
+.cta-btn {
+  background-color: $accent-color;
+  color: white;
+  font-weight: 800;
+  padding: 2em 3em;
+}
 
 @media only screen {
   body {
     h1 {
-
       font-weight: 400;
     }
 
     h2 {
       font-weight: normal;
       font-size: 48px;
-      letter-spacing: -0.05em;
       line-height: 46px;
     }
 
@@ -40,19 +54,16 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 18px;
     }
 
-    p, ul, li {
+    p,
+    ul,
+    li {
       font-size: 16px;
       line-height: 24px;
-      text-align: justify;
-      color: #727272;
     }
 
     ul {
       font-size: 18px;
       line-height: 24px;
-      text-align: justify;
-      color: #000000;
-
     }
   }
 

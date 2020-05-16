@@ -5,7 +5,6 @@ import NewsletterSignup from './../components/newsletter'
 
 import './home.scss'
 import ClientGrid from './../components/clientGrid/index'
-import Hero from './../components/hero'
 
 const IndexPage = (props) => {
   return (
@@ -13,18 +12,29 @@ const IndexPage = (props) => {
       <section className="about-info">
         <div className="container">
           <div className="about-content">
-            <h2 className="about-header">Smart brands trust me to navigate through to digital-led success.</h2>
-            <p>
-              Originally from Bristol UK, now living in the beautiful city of Prague -Over the last ten years of my
-              career has taken me from paid media and performance marketing to full-stack JavaScript development,
-              analytics, automation & entrepreneurship.
-            </p>
-            <p>
-              I help brands to truly understand what's possible in digital, using data smartly, building tools to
-              automate and innovate, and bringing t-shaped expertise across the entire digital field. Clients are able
-              to cut costs, acquire more customers, work more effectively and trust that their digital team is always
-              on, always innovative, and always ahead of the curve.
-            </p>
+            <span className="about-flair">🥴 Digital acquisition & performance</span>
+            <h1 className="about-header">👊 What a header!?</h1>
+            <span className="highlight">
+              A highly effective system for building and optimising digital products at speed. Growth-driven UX and UI
+              design for startups.
+            </span>
+          </div>
+          <div className="extended-info">
+            <div className="vertical">
+            </div>
+
+            <div className="extended-info-content">
+              <p>
+                We’ve developed a unique design delivery framework that brings results in 5 weeks. It uses the
+                industry-proven methodologies Jobs to be Done, for identifying product flaws and opportunities, and
+                Design Sprint for solving and testing product problems.
+              </p>
+              <p>
+                This is an optimised and highly effective way of doing UX and UI design for early stage companies. It’s
+                based on our experience with over 100 startups, some of them backed by YC, Techstars, Seedcamp, Founders
+                Factory and other leading accelerators and investors.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -32,8 +42,6 @@ const IndexPage = (props) => {
       <ClientGrid />
       <section className="services">
         <div className="container">
-          <h3>SERVICES</h3>
-
           <div className="service-content">
             <div className="service">
               <h2 className="service-title">Acquisition</h2>

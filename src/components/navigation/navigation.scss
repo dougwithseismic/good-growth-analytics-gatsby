@@ -13,12 +13,9 @@
     font-weight: 300;
     font-size: 12px;
     letter-spacing: 0.03em;
-    color: #fff;
 
     .trial-cta {
       display: none;
-      background-color: #ff1d1d;
-      color: white;
       height: 100%;
       flex-direction: row;
       justify-content: center;
@@ -31,8 +28,6 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      background-color: rgb(255, 0, 0);
-      color: white;
       height: 56px;
       z-index: 999; //Above everything - 998 on the fullscreen menu
       text-transform: uppercase;

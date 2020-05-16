@@ -1,4 +1,8 @@
 @media only screen {
+  
+  .fist {
+    cursor: pointer;
+  }
   .about-info {
     margin: 3em 0;
     padding: 2em;
@@ -14,7 +18,7 @@
 
       .about-content {
         .about-header {
-          font-size: 4em;
+          font-size: 3.5em;
           font-weight: 400;
           line-height: 1.125em;
           letter-spacing: -0.05em;

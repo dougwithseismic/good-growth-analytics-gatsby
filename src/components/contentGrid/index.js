@@ -44,13 +44,13 @@ const ContentGrid = (props) => {
   return (
     <section className="content-grid">
       <div className="container">
-        <Img
+        {/* <Img
           className="swirl-image"
           fluid={data.file.childImageSharp.fluid}
           alt="The Good Growth Analytics Swirl"
           style={{ position: 'absolute' }}
           fadeIn={false}
-        />
+        /> */}
 
         <div className="grid-items">
           {data.gcms.page.features[0].references.map((article) => (

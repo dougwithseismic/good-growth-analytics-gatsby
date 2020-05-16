@@ -1,42 +1,100 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContentGrid from '../components/contentGrid'
 import Layout from './../components/layout'
 import NewsletterSignup from './../components/newsletter'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 import './home.scss'
 import ClientGrid from './../components/clientGrid/index'
 
-const IndexPage = (props) => {
+const IndexPage = () => {
+  const animation = useAnimation()
+  const [ fistElement, inView, entry ] = useInView()
+
+  useEffect(
+    () => {
+      if (inView) {
+        //animation.start('fistMe')
+      }
+    },
+    [ animation, inView ]
+  )
+
+  const fistBump = {
+    fistMe: {
+      y: [ 270, 150 ],
+      scale: [ 0, 1.5, 1, 0 ],
+      rotate: [ 0, 20, 0 ],
+    },
+    spin: {
+      rotate: 720,
+    },
+  }
+
   return (
     <Layout>
       <section className="about-info">
         <div className="container">
           <div className="about-content">
-            <span className="flair">🥴 Digital acquisition & performance marketing</span>
-            <h1 className="about-header">👊 No Nonsense Digital Direction.</h1>
-            <span className="highlight">
+            {/* <span className="flair">🥴 Digital acquisition & performance marketing</span> */}
+            <motion.h1
+              className="about-header"
+              animate={{ opacity: 1, transition: { duration: 2, delay: 0.5 } }}
+              initial={{ opacity: 0 }}
+            >
+              <motion.div
+                className="fist"
+                role="img"
+                animate={animation}
+                ref={fistElement}
+                variants={fistBump}
+                initial={{ scale: 0 }}
+                transition={{ duration: 0.8, easing: 'easeInOut' }}
+              >
+                👊
+              </motion.div>
+              No Nonsense Digital Direction.
+            </motion.h1>
+            <motion.span
+              className="highlight"
+              animate={{ opacity: 1, y: 0, transition: { duration: 2, delay: 1 } }}
+              initial={{ opacity: 0, y: 82 }}
+            >
               I help brands to acquire more customers, cut out wasted marketing spend and fully understand their digital
               setup.
-            </span>
+            </motion.span>
+            <motion.div
+              className="cta-button"
+              whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
+              onTap={() => animation.start('fistMe')}
+              animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
+              initial={{ opacity: 0, y: 82 }}
+            >
+              Grab the intro pack
+            </motion.div>
           </div>
-          <div className="extended-info">
+          <motion.div className="extended-info">
             <div className="vertical">The blurb</div>
             <div className="extended-info-content">
-              <p>
+              <motion.p>
                 Originally from Bristol UK, now living in the beautiful city of Prague, I've launched AR robots with
                 Apple, freed entire teams from dull, monotonous work, built tools and products to make marketer's lives
-                easier. Now I'm helping brands to understand where to level up their digital setup, and how to act on it.
-              </p>
-              <p>
+                easier. Now I'm helping brands to understand where to level up their digital setup, and how to act on
+                it.
+              </motion.p>
+              <motion.p>
                 Brands talk to me when they're ready to take their digital setup seriously - I help them understand
                 their current position, where they should be focusing, and how act on that information to make genuine
-                gains as fast as possible. <p />
+                gains as fast as possible.
+                <br />
+                <br />
                 <span className="highlight">
                   Faster Growth, better returns, happier teams & smarter decisions - Interested?
                 </span>
-              </p>
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <ContentGrid />

@@ -53,15 +53,7 @@ const IndexPage = (props) => {
                 <li>Technical SEO</li>
               </ul>
             </div>
-            <div className="service">
-              <h2 className="service-title">Creative</h2>
-              <ul className="service-desc">
-                <li>Media Asset Creation</li>
-                <li>UX Design</li>
-                <li>Distruptive Thinking</li>
-                <li>Digital Transformations</li>
-              </ul>
-            </div>
+
             <div className="service">
               <h2 className="service-title">Development</h2>
               <ul className="service-desc">

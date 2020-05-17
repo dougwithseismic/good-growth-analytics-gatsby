@@ -103,15 +103,15 @@ const IndexPage = () => {
           >
             <motion.p>
               I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
-              products to make marketer's lives easier and helped brands grow rapidly through paid advertising. Now I'm{' '}
+              products to make marketer's lives easier and helped brands grow rapidly through paid advertising.
               <span className="highlight">
-                teaching brands to understand where they fall flat online, and how to fix it
+                Now I'm teaching brands to understand where they fall flat with their digital setups, and how to fix it.
               </span>.
             </motion.p>
             <motion.p>
-              I'll help you understand your current position, where you should be focusing your efforts, what
-              opportunities you're missing out on, and how to act on that information to make genuine gains as fast as
-              possible.
+              I'll help you understand your current position on paid advertising, customer journeys and website
+              optimisation, where you should be focusing your efforts, what opportunities you're missing out on, and how
+              to act on that information to make genuine gains as fast as possible.
               <br />
               <br />
             </motion.p>
@@ -183,11 +183,15 @@ const IndexPage = () => {
           </li>
         </ul>
         {/* Step One */}
-        <TwoBlock title="Step 1." highlight="Need to get hold of me sharpish? BAU contacts at the bottom of page 🤜">
-          <h2>Getting Started</h2>
+        <TwoBlock
+          title="Step 1."
+          highlight="Need to get hold of me sharpish? Hit the chat icon in the bottom right corner - It goes straight to my Slack 🤜"
+        >
+          <h2>First contact</h2>
           <motion.p>
-            Hit the button below and fill out a super quick 20-second onboarding - It's non-commital, just some multiple
-            choice Qs to help me scope you out and see if we'll be a fit together.
+            Simple really - Email <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> or{' '}
+            <a href="https://linkedin.com/in/dougsilkstone">Linkedin</a> - Fill me in on your backstory and where you
+            feel you need help the most.
           </motion.p>
           <motion.p>
             Once that's done, go take a snoop around the site and check out some case studies and guides to get
@@ -211,8 +215,9 @@ const IndexPage = () => {
         <TwoBlock title="Step 2.">
           <h2>Scoping the project</h2>
           <motion.p>
-            We get down to business. Normally a thirty minute to one hour call with stakeholders to discuss goals and
-            deliverables - We'll sign off on expectations, get a 50% deposit sorted and pass over access (accounts, basecamp etc) to put the project in motion.
+            We get down to business. Normally a thirty minute call with stakeholders to discuss goals and deliverables -
+            We'll sign off on expectations, get a 50% deposit sorted and pass over access (accounts, basecamp etc) to
+            put the project in motion.
           </motion.p>
         </TwoBlock>
         <TwoBlock title="Step 3." highlight="Results. Rinse. Repeat. ✅">

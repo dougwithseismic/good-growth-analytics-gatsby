@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer'
 
 import './home.scss'
 import ClientGrid from './../components/clientGrid/index'
+import TwoBlock from './../components/common/twoblock'
 
 const IndexPage = () => {
   const animation = useAnimation()
@@ -23,7 +24,7 @@ const IndexPage = () => {
 
   const fistBump = {
     fistMe: {
-      y: [ 270, 150 ],
+      y: [ 270, 0 ],
       scale: [ 0, 1.5, 1, 0 ],
       rotate: [ 0, 20, 0 ],
     },
@@ -61,8 +62,8 @@ const IndexPage = () => {
               animate={{ opacity: 1, y: 0, transition: { duration: 2, delay: 1 } }}
               initial={{ opacity: 0, y: 82 }}
             >
-              I help brands to acquire more customers, cut out wasted marketing spend and fully understand their digital
-              setup.
+              I help brands to acquire more customers, create modern digital experiences & get more from their paid
+              advertising and analytics.
             </motion.span>
             <motion.div
               className="cta-button"
@@ -74,65 +75,78 @@ const IndexPage = () => {
               Grab the intro pack
             </motion.div>
           </div>
-          <motion.div className="extended-info">
-            <div className="vertical">The blurb</div>
-            <div className="extended-info-content">
-              <motion.p>
-                Originally from Bristol UK, now living in the beautiful city of Prague, I've launched AR robots with
-                Apple, freed entire teams from dull, monotonous work, built tools and products to make marketer's lives
-                easier. Now I'm helping brands to understand where to level up their digital setup, and how to act on
-                it.
-              </motion.p>
-              <motion.p>
-                Brands talk to me when they're ready to take their digital setup seriously - I help them understand
-                their current position, where they should be focusing, and how act on that information to make genuine
-                gains as fast as possible.
-                <br />
-                <br />
-                <span className="highlight">
-                  Faster Growth, better returns, happier teams & smarter decisions - Interested?
-                </span>
-              </motion.p>
-            </div>
-          </motion.div>
         </div>
       </section>
-      <ContentGrid />
-      <ClientGrid />
+      <TwoBlock
+        title="About Me"
+        highlight="Faster Growth, better returns, happier teams & smarter decisions - Interested?"
+      >
+        <motion.p>
+          I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
+          products to make marketer's lives easier and helped brands grow rapidly through paid advertising. Now I'm
+          helping brands to understand where they fall flat online, and how to fix it.
+        </motion.p>
+        <motion.p>
+          Talk to me when you're ready to take your digital setup seriously - I'll help you understand your current
+          position, where you should be focusing, and how to act on that information to make genuine gains as fast as
+          possible.
+          <br />
+          <br />
+        </motion.p>
+      </TwoBlock>
+      <ClientGrid title="A few of the companies I've helped.." />
+
+      <TwoBlock title="Availability & Pricing">
+        <motion.p>
+          Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
+        </motion.p>
+      </TwoBlock>
+
+      <TwoBlock title="Contact Details">
+        <ul>
+          <li>
+            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+              doug@withseismic.com
+            </a>
+          </li>
+        </ul>
+      </TwoBlock>
 
       <section className="services">
         <div className="container">
           <div className="service-content">
-            <span className="subheading" style={{ maxWidth: '15%' }}>
-              Helping brands with..
-            </span>
+            <span className="subheading">Services Offered</span>
             <div className="service">
-              <span className="service-title highlight">Acquisition</span>
+              <span className="service-title highlight">Performance</span>
               <ul className="service-desc">
-                <li>Google Ads</li>
-                <li>Paid Social</li>
-                <li>SEO Strategy</li>
-                <li>SEM Automation</li>
+                <li>Paid Advertising Management</li>
+                <li>Customer Acquisition Strategy</li>
+                <li>App Store Optimisation</li>
+                <li>One-off Audits & Builds</li>
               </ul>
             </div>
 
             <div className="service">
               <span className="service-title highlight">Development</span>
               <ul className="service-desc">
-                <li>Web Development (React)</li>
-                <li>Web Scraping</li>
-                <li>Scripting & Automation</li>
+                <li>Product Development (React, Native)</li>
+                <li>Site Development (Gatsby, Nextjs.)</li>
+                <li>Scripting & SEM Automation</li>
                 <li>Bespoke Tool Development</li>
-                <li>Distruptive R&D</li>
               </ul>
             </div>
             <div className="service">
               <span className="service-title highlight">Analytics & Data</span>
               <ul className="service-desc">
-                <li>Analytics & Tracking</li>
+                <li>Google Tag Manager & Google Analytics</li>
+                <li>App Analytics Tracking (Firebase, Mixpanel)</li>
                 <li>Data Pipeline Implementation</li>
                 <li>Reporting & Insights</li>
-                <li>Business Intelligence</li>
               </ul>
             </div>
           </div>
@@ -145,6 +159,8 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+      <ContentGrid />
+
       {/* <NewsletterSignup>
         {({ onSignup }) => (
           <section className="newsletter-signup">

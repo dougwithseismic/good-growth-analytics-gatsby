@@ -29,6 +29,9 @@ span {
   font-family: itc-avant-garde-gothic-pro, sans-serif;
 }
 
+section {
+}
+
 .highlight {
   font-size: 1.25em;
   line-height: 1.4em;
@@ -55,12 +58,6 @@ span {
   text-transform: uppercase;
 }
 
-.cta-btn {
-  background-color: $accent-color;
-  color: white;
-  font-weight: 800;
-  padding: 2em 3em;
-}
 
 @media only screen {
   body {
@@ -123,7 +120,7 @@ span {
     border-radius: 2px;
 
     padding: 1em 2em;
-    margin: 3em 0;
+    margin: 2em 0 0;
     font-weight: 300;
     min-width: 60px;
 

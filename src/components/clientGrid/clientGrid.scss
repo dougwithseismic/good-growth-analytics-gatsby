@@ -1,21 +1,21 @@
 @media only screen {
   .client-grid {
-    display: block;
-    padding: 0 2em;
-    margin: 64px 0;
+    padding: 2em;
 
     .container {
       display: block;
-      .highlight {
-        line-height: 1.2em;
+
+      .client-grid-content {
+        .highlight {
+          line-height: 1.2em;
+        }
       }
     }
   }
   .client-logo-grid {
     display: grid;
     width: 100%;
-    margin: 2em 0;
-
+    margin: 1.5em 0;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
@@ -69,10 +69,10 @@
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
   .client-grid {
-    margin: 128px 0;
-
     .container {
       align-items: flex-start;
+      .client-grid-content {
+      }
     }
   }
   .client-logo-grid {

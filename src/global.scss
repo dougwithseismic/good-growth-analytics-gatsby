@@ -47,6 +47,7 @@ section {
 }
 
 .flair {
+  align-self: flex-start;
   font-family: sofia-pro, Arial, Helvetica, sans-serif;
   font-size: .75em;
   padding: 0.5em 0.5em;
@@ -120,7 +121,7 @@ section {
     border-radius: 2px;
 
     padding: 1em 2em;
-    margin: 2em 0 0;
+    margin: 2em 0 ;
     font-weight: 300;
     min-width: 60px;
 

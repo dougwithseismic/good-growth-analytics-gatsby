@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import ContentGrid from '../components/contentGrid'
 import Layout from './../components/layout'
 import NewsletterSignup from './../components/newsletter'
@@ -14,6 +14,8 @@ const IndexPage = () => {
   const animation = useAnimation()
   const [ fistElement, inView, entry ] = useInView()
 
+  const aboutSection = useRef()
+
   useEffect(
     () => {
       if (inView) {
@@ -25,9 +27,11 @@ const IndexPage = () => {
 
   const fistBump = {
     fistMe: {
-      y: [ 270, 0 ],
-      scale: [ 0, 1.5, 1, 0 ],
-      rotate: [ 0, 20, 0 ],
+      y: [ 350, 150, 175, 0 ],
+      x: [ 0, -120, 0 ],
+      scale: [ 0, 15, 1, 0 ],
+      rotate: [ 0, 40, 0 ],
+      transition: { duration: 0.8, delay: 0.5 },
     },
     spin: {
       rotate: 720,
@@ -39,23 +43,11 @@ const IndexPage = () => {
       <section className="about-info">
         <div className="container">
           <div className="about-content">
-            {/* <span className="flair">🥴 Digital acquisition & performance marketing</span> */}
             <motion.h1
               className="about-header"
               animate={{ opacity: 1, transition: { duration: 2, delay: 0.5 } }}
               initial={{ opacity: 0 }}
             >
-              <motion.div
-                className="fist"
-                role="img"
-                animate={animation}
-                ref={fistElement}
-                variants={fistBump}
-                initial={{ scale: 0 }}
-                transition={{ duration: 0.8, easing: 'easeInOut' }}
-              >
-                👊
-              </motion.div>
               No Nonsense Digital Direction.
             </motion.h1>
             <motion.span
@@ -69,6 +61,13 @@ const IndexPage = () => {
             <motion.div
               className="cta-button"
               whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
+              onClick={() => {
+                aboutSection.current.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                  inline: 'nearest',
+                })
+              }}
               onTap={() => animation.start('fistMe')}
               animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
               initial={{ opacity: 0, y: 82 }}
@@ -76,24 +75,50 @@ const IndexPage = () => {
               Let's get acquainted
             </motion.div>
           </div>
+          <motion.span
+            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 2 } }}
+            initial={{ opacity: 0, y: 82 }}
+            className="flair"
+          >
+            Currently feeling wonkeylegged 🥴.
+          </motion.span>
+          <motion.div
+            className="fist"
+            role="img"
+            animate={animation}
+            ref={fistElement}
+            variants={fistBump}
+            initial={{ scale: 0 }}
+            transition={{ duration: 0.8, easing: 'easeInOut' }}
+          >
+            👊
+          </motion.div>
         </div>
       </section>
-      <TwoBlock
-        title="About Me"
-        highlight="Faster Growth, better returns, happier teams & smarter decisions - Interested?"
-      >
-        <motion.p>
-          I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
-          products to make marketer's lives easier and helped brands grow rapidly through paid advertising. Now I'm
-          helping brands to understand where they fall flat online, and how to fix it.
-        </motion.p>
-        <motion.p>
-          'll help you understand your current position, where you should be focusing your efforts, what opportunities
-          you're missing out on, and how to act on that information to make genuine gains as fast as possible.
-          <br />
-          <br />
-        </motion.p>
-      </TwoBlock>
+      <section className="about-section" ref={aboutSection}>
+        <div className="container">
+          <TwoBlock
+            title="About Me"
+            highlight="Faster Growth, better returns, happier teams & smarter decisions - Interested?"
+          >
+            <motion.p>
+              I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
+              products to make marketer's lives easier and helped brands grow rapidly through paid advertising. Now I'm{' '}
+              <span className="highlight">
+                teaching brands to understand where they fall flat online, and how to fix it
+              </span>.
+            </motion.p>
+            <motion.p>
+              I'll help you understand your current position, where you should be focusing your efforts, what
+              opportunities you're missing out on, and how to act on that information to make genuine gains as fast as
+              possible.
+              <br />
+              <br />
+            </motion.p>
+          </TwoBlock>
+        </div>
+      </section>
+
       <ClientGrid title="A few of the companies I've helped.." />
 
       <section className="services">
@@ -105,8 +130,8 @@ const IndexPage = () => {
               <ul className="service-desc">
                 <li>Paid Advertising Management</li>
                 <li>Customer Acquisition Strategy</li>
+                <li>Organic / SEO Strategy</li>
                 <li>App Store Optimisation</li>
-                <li>One-off Audits & Builds</li>
               </ul>
             </div>
 
@@ -132,35 +157,95 @@ const IndexPage = () => {
         </div>
       </section>
       <CtaBlock>
-        <h1>The Details</h1>
-        <TwoBlock title="Availability & Pricing">
+        <h1>What's the process?</h1>
+        <p>
+          Nobody likes to wait about and the world of digital is no exception. I work fast. Really fast. It's in
+          everyones interest to see results as quickly as possible, and thanks to the wizardry of modern technology and
+          productization, its not just a lofty agency promise but a reality.
+        </p>
+
+        <p>What does that mean for you? It means..</p>
+
+        <ul>
+          <li>
+            🕔 <span className="highlight">Five day sprints</span> - Short project turnarounds in concentrated bursts.
+          </li>
+          <li>
+            💸 <span className="highlight">Per project costing</span> - No dragging out projects for more hours, or
+            rogue agency hostage holding.
+          </li>
+          <li>
+            🤝 <span className="highlight">No minimum contracts</span> - Team up whenever you want, dip out when you
+            need to. (You won't want to though.)
+          </li>
+          <li>
+            🚀<span className="highlight">Rapid results</span> - More work done in less time - Speaks for itself really.
+          </li>
+        </ul>
+        {/* Step One */}
+        <TwoBlock title="Step 1." highlight="Need to get hold of me sharpish? BAU contacts at the bottom of page 🤜">
+          <motion.p>
+            Hit the button below and fill out a super quick 20-second onboarding - It's non-commital, just some multiple
+            choice Qs to help me scope you out and see if we'll be a fit together.
+          </motion.p>
+          <motion.p>
+            Once that's done, go take a snoop around the site and check out some case studies and guides to get
+            excited.. I'll reach out to you by the power of the internet to arrange a chat. 🧙‍♂️
+          </motion.p>
+          <motion.div
+            className="cta-button"
+            whileHover={{
+              x: [ 0, 5 ],
+              rotate: [ 1, -2 ],
+              backgroundColor: '#FF0',
+              transition: { duration: 0.5, yoyo: Infinity },
+              initial: { x: 0, backgroundColor: '#FFF', transition: { duration: 0.5 } },
+            }}
+            whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
+          >
+            Get started in 20 seconds.
+          </motion.div>
+          {/* Step Two */}
+        </TwoBlock>
+        <TwoBlock title="Step 2.">
+          <motion.p>
+            We get down to business. Normally a thirty minute to one hour call - Google Meets, Whereby,{' '}
+            <strong>anything except Skype, really,</strong> followed by access sharing using my nifty client onboarding
+            tools. We'll sign off deliverables, get a 50% deposit sorted and crack on.
+          </motion.p>
+        </TwoBlock>
+        <TwoBlock title="Step 3." highlight="Results. Rinse. Repeat. ✅">
+          <motion.p>
+            I'm available by email, slack and calls for the project duration so you'll know how to get hold of me
+            whenever needed. On work completion, it's time for one last handover call where we'll discuss findings, next
+            steps and any other suggestions I have to offer.
+          </motion.p>
+        </TwoBlock>
+        <TwoBlock title="Availability & Pricing" highlight="Project rates from £350/day">
           <motion.p>
             Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
           </motion.p>
-          <motion.p>Project rates from £350/day</motion.p>
         </TwoBlock>
       </CtaBlock>
       <ContentGrid />
 
-      <TwoBlock title="Contact Details">
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-              doug@withseismic.com
-            </a>
-          </li>
-        </ul>
-      </TwoBlock>
-      <section className="fit-check">
-        <div className="jc-start container">
-          <div className="fit-check-content">
-            <span className="highlight">hello</span>
-          </div>
+      <section className="contact-section">
+        <div className="container">
+          <TwoBlock title="Contact Details">
+            <p />
+            <ul>
+              <li>
+                <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+                  doug@withseismic.com
+                </a>
+              </li>
+            </ul>
+          </TwoBlock>
         </div>
       </section>
 

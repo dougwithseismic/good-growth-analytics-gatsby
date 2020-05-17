@@ -10,6 +10,8 @@
     .container {
       position: relative;
       flex-direction: column;
+      max-width: 1400px;
+
 
       .grid-items {
         width: 100%;

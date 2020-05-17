@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer'
 import './home.scss'
 import ClientGrid from './../components/clientGrid/index'
 import TwoBlock from './../components/common/twoblock'
+import CtaBlock from './../components/common/ctablock'
 
 const IndexPage = () => {
   const animation = useAnimation()
@@ -72,7 +73,7 @@ const IndexPage = () => {
               animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
               initial={{ opacity: 0, y: 82 }}
             >
-              Grab the intro pack
+              Let's get acquainted
             </motion.div>
           </div>
         </div>
@@ -96,27 +97,6 @@ const IndexPage = () => {
       </TwoBlock>
       <ClientGrid title="A few of the companies I've helped.." />
 
-      <TwoBlock title="Availability & Pricing">
-        <motion.p>
-          Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
-        </motion.p>
-      </TwoBlock>
-
-      <TwoBlock title="Contact Details">
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-              doug@withseismic.com
-            </a>
-          </li>
-        </ul>
-      </TwoBlock>
-
       <section className="services">
         <div className="container">
           <div className="service-content">
@@ -134,8 +114,8 @@ const IndexPage = () => {
             <div className="service">
               <span className="service-title highlight">Development</span>
               <ul className="service-desc">
-                <li>Product Development (React, Native)</li>
-                <li>Site Development (Gatsby, Nextjs.)</li>
+                <li>Product Dev (React, Native)</li>
+                <li>Site Dev (Gatsby, Nextjs.)</li>
                 <li>Scripting & SEM Automation</li>
                 <li>Bespoke Tool Development</li>
               </ul>
@@ -143,15 +123,40 @@ const IndexPage = () => {
             <div className="service">
               <span className="service-title highlight">Analytics & Data</span>
               <ul className="service-desc">
-                <li>Google Tag Manager & Google Analytics</li>
-                <li>App Analytics Tracking (Firebase, Mixpanel)</li>
-                <li>Data Pipeline Implementation</li>
+                <li>GTM / GA Audits & Implementation</li>
+                <li>Third Party Tool Integration</li>
+                <li>Data Pipeline Builds</li>
                 <li>Reporting & Insights</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
+      <CtaBlock>
+        <h1>The Details</h1>
+        <TwoBlock title="Availability & Pricing">
+          <motion.p>
+            Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
+          </motion.p>
+          <motion.p>Project rates from £350/day</motion.p>
+        </TwoBlock>
+      </CtaBlock>
+      <ContentGrid />
+
+      <TwoBlock title="Contact Details">
+        <ul>
+          <li>
+            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+              doug@withseismic.com
+            </a>
+          </li>
+        </ul>
+      </TwoBlock>
       <section className="fit-check">
         <div className="jc-start container">
           <div className="fit-check-content">
@@ -159,7 +164,6 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <ContentGrid />
 
       {/* <NewsletterSignup>
         {({ onSignup }) => (

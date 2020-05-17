@@ -5,6 +5,7 @@ import Navigation from './navigation'
 import Footer from './footer'
 
 const Layout = ({ children }) => {
+
   return (
     <div>
       <Navigation />

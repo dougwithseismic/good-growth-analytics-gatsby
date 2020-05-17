@@ -7,7 +7,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://dougsilkstone.com`
+    siteUrl: `https://dougsilkstone.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -109,6 +109,15 @@ module.exports = {
         // should be an object or a function that is executed in the browser
         // Defaults to null
         defaultDataLayer: { platform: 'gatsby' },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: `3c16ec30-b119-4575-b02e-621c130628fe`,
+        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: true, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
     },
 

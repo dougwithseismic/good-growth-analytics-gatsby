@@ -11,6 +11,7 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -19,6 +20,7 @@ export default function HTML(props) {
           style={{ overflowX: 'hidden' }}
         />
         {props.postBodyComponents}
+        
       </body>
     </html>
   )

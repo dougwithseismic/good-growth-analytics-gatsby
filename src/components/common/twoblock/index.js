@@ -7,9 +7,7 @@ const TwoBlock = ({ title, children, highlight }) => {
     <section className="info-row">
       <div className="container">
         <motion.div className="extended-info">
-          <h2 className="vertical" style={{ margin: 0 }}>
-            {title}
-          </h2>
+          <h2 className="vertical">{title}</h2>
           <div className="extended-info-content">
             {children}
 

@@ -88,9 +88,8 @@ const IndexPage = () => {
           helping brands to understand where they fall flat online, and how to fix it.
         </motion.p>
         <motion.p>
-          Talk to me when you're ready to take your digital setup seriously - I'll help you understand your current
-          position, where you should be focusing, and how to act on that information to make genuine gains as fast as
-          possible.
+          'll help you understand your current position, where you should be focusing your efforts, what opportunities
+          you're missing out on, and how to act on that information to make genuine gains as fast as possible.
           <br />
           <br />
         </motion.p>

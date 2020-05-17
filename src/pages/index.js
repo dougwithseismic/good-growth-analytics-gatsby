@@ -197,7 +197,7 @@ const IndexPage = () => {
             Once that's done, go take a snoop around the site and check out some case studies and guides to get
             excited.. I'll reach out to you by the power of the internet to arrange a chat. 🧙‍♂️
           </motion.p>
-          <motion.div
+          {/* <motion.div
             className="cta-button"
             whileHover={{
               x: [ 0, 5 ],
@@ -207,7 +207,7 @@ const IndexPage = () => {
               initial: { x: 0, backgroundColor: '#FFF', transition: { duration: 0.5 } },
             }}
             whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
-          >
+          > */}
             Get started in 20 seconds.
           </motion.div>
           {/* Step Two */}

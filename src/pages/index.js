@@ -230,7 +230,7 @@ const IndexPage = () => {
         </TwoBlock>
         <TwoBlock title="Availability & Pricing" highlight="Project rates from £350/day">
           <motion.p>
-            Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
+            Available from June 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
           </motion.p>
         </TwoBlock>
         <TwoBlock title="Contact Details">

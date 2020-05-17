@@ -207,7 +207,7 @@ const IndexPage = () => {
               initial: { x: 0, backgroundColor: '#FFF', transition: { duration: 0.5 } },
             }}
             whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
-          > */}
+          > 
             Get started in 20 seconds.
           </motion.div>
           {/* Step Two */}

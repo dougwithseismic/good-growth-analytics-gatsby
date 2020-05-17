@@ -80,7 +80,7 @@ const IndexPage = () => {
             initial={{ opacity: 0, y: 82 }}
             className="flair"
           >
-            Currently feeling wonkeylegged 🥴.
+            Crafted with Gatsby / React / GraphCMS 🥴.
           </motion.span>
           <motion.div
             className="fist"
@@ -184,6 +184,7 @@ const IndexPage = () => {
         </ul>
         {/* Step One */}
         <TwoBlock title="Step 1." highlight="Need to get hold of me sharpish? BAU contacts at the bottom of page 🤜">
+          <h2>Getting Started</h2>
           <motion.p>
             Hit the button below and fill out a super quick 20-second onboarding - It's non-commital, just some multiple
             choice Qs to help me scope you out and see if we'll be a fit together.
@@ -208,46 +209,42 @@ const IndexPage = () => {
           {/* Step Two */}
         </TwoBlock>
         <TwoBlock title="Step 2.">
+          <h2>Scoping the project</h2>
           <motion.p>
-            We get down to business. Normally a thirty minute to one hour call - Google Meets, Whereby,{' '}
-            <strong>anything except Skype, really,</strong> followed by access sharing using my nifty client onboarding
-            tools. We'll sign off deliverables, get a 50% deposit sorted and crack on.
+            We get down to business. Normally a thirty minute to one hour call with stakeholders to discuss goals and
+            deliverables - We'll sign off on expectations, get a 50% deposit sorted and pass over access (accounts, basecamp etc) to put the project in motion.
           </motion.p>
         </TwoBlock>
         <TwoBlock title="Step 3." highlight="Results. Rinse. Repeat. ✅">
+          <h2>Getting to work</h2>
           <motion.p>
-            I'm available by email, slack and calls for the project duration so you'll know how to get hold of me
-            whenever needed. On work completion, it's time for one last handover call where we'll discuss findings, next
-            steps and any other suggestions I have to offer.
+            Regular updates via email and Slack whilst the project is in motion; and on work completion, an extensively
+            documented handover discussion where we'll talk findings, next steps and more ways to make digital waves.
           </motion.p>
+          <motion.p>That's all there is to it!</motion.p>
         </TwoBlock>
         <TwoBlock title="Availability & Pricing" highlight="Project rates from £350/day">
           <motion.p>
             Available from July 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
           </motion.p>
         </TwoBlock>
+        <TwoBlock title="Contact Details">
+          <p />
+          <ul>
+            <li>
+              <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
+                doug@withseismic.com
+              </a>
+            </li>
+          </ul>
+        </TwoBlock>
       </CtaBlock>
-      <ContentGrid />
-
-      <section className="contact-section">
-        <div className="container">
-          <TwoBlock title="Contact Details">
-            <p />
-            <ul>
-              <li>
-                <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-                  doug@withseismic.com
-                </a>
-              </li>
-            </ul>
-          </TwoBlock>
-        </div>
-      </section>
+      {/* <ContentGrid /> */}
 
       {/* <NewsletterSignup>
         {({ onSignup }) => (

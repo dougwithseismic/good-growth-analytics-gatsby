@@ -81,6 +81,8 @@ section {
     p,
     ul,
     li {
+      padding-left: 0;
+      list-style: none;
       font-size: 16px;
       line-height: 24px;
     }
@@ -92,7 +94,7 @@ section {
   }
 
   section {
-    margin: auto;
+    margin: 3em 0;
   }
   .container {
     display: flex;

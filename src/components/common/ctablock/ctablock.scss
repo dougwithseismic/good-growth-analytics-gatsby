@@ -1,6 +1,5 @@
 @media only screen {
   .call-to-action-block {
-      
     display: flex;
     .container {
       flex-direction: column;
@@ -8,16 +7,20 @@
       align-items: flex-start;
       padding: 2em;
 
-
       .call-to-action-content {
-
         display: flex;
         flex-direction: column;
         h1 {
-            margin: 0.3em 0;
+          margin: 0.3em 0;
           font-size: 4em;
           font-weight: 700;
           letter-spacing: -0.05em;
+        }
+
+        ul {
+          li {
+            margin-bottom: 1em;
+          }
         }
       }
     }

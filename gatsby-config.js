@@ -4,10 +4,10 @@ console.log('process.env.GCMS_ENDPOINT :>> ', process.env.GCMS_ENDPOINT)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://dougsilkstone.com`,
+    title: `Senior Performance Marketing & Web Development`,
+    description: `Just a portfolio - There are many like it but this one is mine 🚀`,
+    author: `@dougwithseismic`,
+    siteUrl: `https://withseismic.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

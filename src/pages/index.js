@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import ContentGrid from '../components/contentGrid'
 import Layout from './../components/layout'
-import NewsletterSignup from './../components/newsletter'
+import SEO from './../components/seo'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -40,6 +40,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO
+        description={`Looking for help with your paid advertising and analytics? I help brands to acquire more customers, create modern digital experiences & get more from their paid advertising and analytics. `}
+        title={`Senior Performance Marketing & Web Developer For Hire 🚀`}
+      />
       <section className="about-info">
         <div className="container">
           <div className="about-content">
@@ -80,7 +84,7 @@ const IndexPage = () => {
             initial={{ opacity: 0, y: 82 }}
             className="flair"
           >
-            Crafted with Gatsby / React / GraphCMS 🥴.
+            Currently feeling claustrophobic 🥴.
           </motion.span>
           <motion.div
             className="fist"
@@ -98,16 +102,19 @@ const IndexPage = () => {
       <section className="about-section" ref={aboutSection}>
         <div className="container">
           <TwoBlock
-            title="About Me"
+            title="The blurb"
             highlight="Faster Growth, better returns, happier teams & smarter decisions - Interested?"
           >
             <motion.p>
               I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
               products to make marketer's lives easier and helped brands grow rapidly through paid advertising.
+            </motion.p>
+            <p>
               <span className="highlight">
                 Now I'm teaching brands to understand where they fall flat with their digital setups, and how to fix it.
               </span>.
-            </motion.p>
+            </p>
+
             <motion.p>
               I'll help you understand your current position on paid advertising, customer journeys and website
               optimisation, where you should be focusing your efforts, what opportunities you're missing out on, and how

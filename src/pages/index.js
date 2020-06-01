@@ -1,285 +1,189 @@
 import React, { useEffect, useRef } from 'react'
-import ContentGrid from '../components/contentGrid'
 import Layout from './../components/layout'
 import SEO from './../components/seo'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import { Grid, Row, Col } from 'react-flexbox-grid'
+
 import './home.scss'
-import ClientGrid from './../components/clientGrid/index'
-import TwoBlock from './../components/common/twoblock'
-import CtaBlock from './../components/common/ctablock'
 
 const IndexPage = () => {
-  const animation = useAnimation()
-  const [ fistElement, inView, entry ] = useInView()
-
-  const aboutSection = useRef()
-
-  useEffect(
-    () => {
-      if (inView) {
-        //animation.start('fistMe')
-      }
-    },
-    [ animation, inView ]
-  )
-
-  const fistBump = {
-    fistMe: {
-      y: [ 350, 150, 175, 0 ],
-      x: [ 0, -120, 0 ],
-      scale: [ 0, 15, 1, 0 ],
-      rotate: [ 0, 40, 0 ],
-      transition: { duration: 0.8, delay: 0.5 },
-    },
-    spin: {
-      rotate: 720,
-    },
-  }
-
+  const scrollToMe = useRef()
   return (
     <Layout>
       <SEO
         description={`Looking for help with your paid advertising and analytics? I help brands to acquire more customers, create modern digital experiences & get more from their paid advertising and analytics. `}
         title={`Senior Performance Marketing & Web Developer For Hire 🚀`}
       />
-      <section className="about-info">
-        <div className="container">
-          <div className="about-content">
-            <motion.h1
-              className="about-header"
-              animate={{ opacity: 1, transition: { duration: 2, delay: 0.5 } }}
-              initial={{ opacity: 0 }}
-            >
-              No Nonsense Digital Direction.
-            </motion.h1>
-            <motion.span
-              className="highlight"
-              animate={{ opacity: 1, y: 0, transition: { duration: 2, delay: 1 } }}
-              initial={{ opacity: 0, y: 82 }}
-            >
-              I help brands to acquire more customers, create modern digital experiences & get more from their paid
-              advertising and analytics.
-            </motion.span>
-            <motion.div
-              className="cta-button"
-              whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
-              onClick={() => {
-                aboutSection.current.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start',
-                  inline: 'nearest',
-                })
-              }}
-              onTap={() => animation.start('fistMe')}
-              animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
-              initial={{ opacity: 0, y: 82 }}
-            >
-              Let's get acquainted
-            </motion.div>
-          </div>
-          <motion.span
-            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 2 } }}
-            initial={{ opacity: 0, y: 82 }}
-            className="flair"
-          >
-            Currently feeling claustrophobic 🥴.
-          </motion.span>
-          <motion.div
-            className="fist"
-            role="img"
-            animate={animation}
-            ref={fistElement}
-            variants={fistBump}
-            initial={{ scale: 0 }}
-            transition={{ duration: 0.8, easing: 'easeInOut' }}
-          >
-            👊
-          </motion.div>
-        </div>
-      </section>
-      <section className="about-section" ref={aboutSection}>
-        <div className="container">
-          <TwoBlock
-            title="The blurb"
-            highlight="Faster Growth, better returns, happier teams & smarter decisions - Interested?"
-          >
-            <motion.p>
-              I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools and
-              products to make marketer's lives easier and helped brands grow rapidly through paid advertising.
-            </motion.p>
-            <p>
-              <span className="highlight">
-                Now I'm teaching brands to understand where they fall flat with their digital setups, and how to fix it.
-              </span>.
-            </p>
-
-            <motion.p>
-              I'll help you understand your current position on paid advertising, customer journeys and website
-              optimisation, where you should be focusing your efforts, what opportunities you're missing out on, and how
-              to act on that information to make genuine gains as fast as possible.
-              <br />
-              <br />
-            </motion.p>
-          </TwoBlock>
-        </div>
-      </section>
-
-      <ClientGrid title="A few of the companies I've helped.." />
-
-      <section className="services">
-        <div className="container">
-          <div className="service-content">
-            <span className="subheading">Services Offered</span>
-            <div className="service">
-              <span className="service-title highlight">Performance</span>
-              <ul className="service-desc">
-                <li>Paid Advertising Management</li>
-                <li>Customer Acquisition Strategy</li>
-                <li>Organic / SEO Strategy</li>
-                <li>App Store Optimisation</li>
-              </ul>
-            </div>
-
-            <div className="service">
-              <span className="service-title highlight">Development</span>
-              <ul className="service-desc">
-                <li>Product Dev (React, Native)</li>
-                <li>Site Dev (Gatsby, Nextjs.)</li>
-                <li>Scripting & SEM Automation</li>
-                <li>Bespoke Tool Development</li>
-              </ul>
-            </div>
-            <div className="service">
-              <span className="service-title highlight">Analytics & Data</span>
-              <ul className="service-desc">
-                <li>GTM / GA Audits & Implementation</li>
-                <li>Third Party Tool Integration</li>
-                <li>Data Pipeline Builds</li>
-                <li>Reporting & Insights</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <CtaBlock>
-        <h1>What's the process?</h1>
-        <p>
-          Nobody likes to wait about and the world of digital is no exception. I work fast. Really fast. It's in
-          everyones interest to see results as quickly as possible, and thanks to the wizardry of modern technology and
-          productization, its not just a lofty agency promise but a reality.
-        </p>
-
-        <p>What does that mean for you? It means..</p>
-
-        <ul>
-          <li>
-            🕔 <span className="highlight">Five day sprints</span> - Short project turnarounds in concentrated bursts.
-          </li>
-          <li>
-            💸 <span className="highlight">Per project costing</span> - No dragging out projects for more hours, or
-            rogue agency hostage holding.
-          </li>
-          <li>
-            🤝 <span className="highlight">No minimum contracts</span> - Team up whenever you want, dip out when you
-            need to. (You won't want to though.)
-          </li>
-          <li>
-            🚀<span className="highlight">Rapid results</span> - More work done in less time - Speaks for itself really.
-          </li>
-        </ul>
-        {/* Step One */}
-        <TwoBlock
-          title="Step 1."
-          highlight="Need to get hold of me sharpish? Hit the chat icon in the bottom right corner - It goes straight to my Slack 🤜"
-        >
-          <h2>First contact</h2>
-          <motion.p>
-            Simple really - Email <a href="mailto:doug@withseismic.com">doug@withseismic.com</a> or{' '}
-            <a href="https://linkedin.com/in/dougsilkstone">Linkedin</a> - Fill me in on your backstory and where you
-            feel you need help the most.
-          </motion.p>
-          <motion.p>
-            Once that's done, go take a snoop around the site and check out some case studies and guides to get
-            excited.. I'll reach out to you by the power of the internet to arrange a chat. 🧙‍♂️
-          </motion.p>
-          {/* <motion.div
-            className="cta-button"
-            whileHover={{
-              x: [ 0, 5 ],
-              rotate: [ 1, -2 ],
-              backgroundColor: '#FF0',
-              transition: { duration: 0.5, yoyo: Infinity },
-              initial: { x: 0, backgroundColor: '#FFF', transition: { duration: 0.5 } },
-            }}
-            whileTap={{ scale: 0.9, backgroundColor: '#000', color: '#FFF', transition: { duration: 0.2 } }}
-          > 
-            Get started in 20 seconds.
-          </motion.div>
-          {/* Step Two */}
-        </TwoBlock>
-        <TwoBlock title="Step 2.">
-          <h2>Scoping the project</h2>
-          <motion.p>
-            We get down to business. Normally a thirty minute call with stakeholders to discuss goals and deliverables -
-            We'll sign off on expectations, get a 50% deposit sorted and pass over access (accounts, basecamp etc) to
-            put the project in motion.
-          </motion.p>
-        </TwoBlock>
-        <TwoBlock title="Step 3." highlight="Results. Rinse. Repeat. ✅">
-          <h2>Getting to work</h2>
-          <motion.p>
-            Regular updates via email and Slack whilst the project is in motion; and on work completion, an extensively
-            documented handover discussion where we'll talk findings, next steps and more ways to make digital waves.
-          </motion.p>
-          <motion.p>That's all there is to it!</motion.p>
-        </TwoBlock>
-        <TwoBlock title="Availability & Pricing" highlight="Project rates from £350/day">
-          <motion.p>
-            Available from June 2020 - Get in contact to talk account audits, consultations & agency whitelabeling.
-          </motion.p>
-        </TwoBlock>
-        <TwoBlock title="Contact Details">
-          <p />
-          <ul>
-            <li>
-              <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/dougsilkstone" rel="nofollow" target="_blank">
-                doug@withseismic.com
-              </a>
-            </li>
-          </ul>
-        </TwoBlock>
-      </CtaBlock>
-      {/* <ContentGrid /> */}
-
-      {/* <NewsletterSignup>
-        {({ onSignup }) => (
-          <section className="newsletter-signup">
-            <div className="container">
-              <div
-                className="newsletter-content"
-                style={{ marginLeft: '128px', marginTop: '180px', marginBottom: '280px' }}
-              >
-                <h2 style={{ fontFamily: 'proxima-nova', fontWeight: 600, fontSize: '32px', lineHeight: '1.2em' }}>
-                  Name is an integrated, full-service creative studio offering video production, creative development,
-                  and post-production services.
-                </h2>
-                <p>
-                  Everybody’s got a story. And we don’t stop until we’ve uncovered what makes yours worth telling.
-                  Whether it’s working directly with you, an agency partner, or putting the finishing touches on
-                  something special, we’re ready to dig in and get our hands dirty—are you?
-                </p>
+      <div className="container">
+        <Grid fluid className="hero-section">
+          <Row>
+            <Col xs>
+              <div className="hero-main-content">
+                <h1> Performance Marketing & Digital Acquisition</h1>
+                <div className="hero-subtitle">
+                  <span className="highlight">
+                    I help b2c brands to acquire and retain more customers, create modern digital experiences & increase
+                    their margins.
+                  </span>
+                </div>
+                <div
+                  className="cta-bubble"
+                  onClick={() => {
+                    scrollToMe.current.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                >
+                  <div className="cta-bubble-main">What would more sales allow you to do?</div>
+                  <div className="cta-bubble-extra">⟶ Independent Digital Consultant</div>
+                </div>
               </div>
-            </div>
-          </section>
-        )}
-      </NewsletterSignup> */}
+            </Col>
+          </Row>
+        </Grid>
+        <section className="services-section" ref={scrollToMe}>
+          <Grid fluid>
+            <Row>
+              <Col xs={12} md={5} className="service-list">
+                <h3 className="list-item">Services</h3>
+
+                <div className="list-item">Paid Advertising Management</div>
+                <div className="list-item">Ecommerce Growth Strategy ⟵</div>
+                <div className="list-item">Fullstack JavaScript Development</div>
+                <div className="list-item">Agency Auditing</div>
+                <div className="list-item">Analytics & Automation</div>
+              </Col>
+              <Col xs={12} md mdOffset={1}>
+                <h2 style={{ marginBottom: '1em' }}>Who are you relying on for your digital growth?</h2>
+                <p>
+                  Most brands know what success should look like, and even know how to properly connect the dots and put
+                  into practice the plans needed to reach their goals.
+                </p>
+                <p>
+                  However, even with great intentions, many teams don't see the traction the need, and even fewer know
+                  what to do once their strategy fails to provide the results promised. Blog posts and slack groups are
+                  great at spinning a best-practice success story, but very few set you up to handle the nuances and
+                  reality of doing digital business.
+                </p>
+                <p>
+                  That's where I position myself - Working alongside B2C brands to put them on the right track for
+                  sustainable growth, arming them with the right knowledge and game plan to skill up, then acting on it
+                  ‒
+                  <strong>with a tried-and-tested framework for digital growth.</strong>
+                </p>
+                <p>
+                  <span className="highlight">
+                    If you're a B2C business looking to scale out quickly across all channels, grab a call with me today
+                    to work out how.
+                  </span>
+                </p>
+                <div className="cta-bubble">
+                  <a
+                    href="https://calendly.com/doug-withseismic/quick-catchup"
+                    target="_blank"
+                    className="cta-bubble-main"
+                  >
+                    Get a call in the calendar
+                  </a>
+                  <div className="cta-bubble-extra">⟶ No commitment, no cost, no problem</div>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
+        <section className="about-section">
+          <Grid fluid>
+            <Row>
+              <Col xs={12} md={5} className="subtitle-sidebar">
+                <h3 className="list-item">My Mission</h3>
+              </Col>
+              <Col xs={12} md mdOffset={1}>
+                <p>
+                  I've launched AR robots with Apple stores, freed entire teams from dull, monotonous work, built tools
+                  and products to make marketer's lives easier and helped brands grow rapidly through to become market
+                  leaders.
+                </p>
+                <p>
+                  <span className="highlight">
+                    Now I'm teaching brands where to plug the gaps in their digital knowledge to acquire more customers,
+                    make more sales, increase their margin and be less stressed.
+                  </span>
+                </p>
+
+                <p>
+                  I'll help you understand your current position on paid advertising, customer retenion and website
+                  optimisation, where you should be focusing your efforts, what opportunities you're missing out on, and
+                  how to act on that information to make genuine gains as fast as possible.
+                </p>
+                <div className="cta-blurb" style={{ maxWidth: '320px' }}>
+                  <span className="highlight">
+                    Faster Growth, more sales, happier customer & better returns - Interested?
+                  </span>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
+        <section className="testimonial-section">
+          <Grid fluid>
+            <Row>
+              <Col xs={12} md={5} className="subtitle-sidebar">
+                <h3 className="list-item">Testimonials</h3>
+              </Col>
+              <Col xs={12} md mdOffset={1}>
+                <div className="kind-words-list">
+                  <div className="kind-words-item">
+                    {/* One */}
+                    <div className="kind-words-quote">
+                      "With Doug I knew I was onto a winner; He's a big-picture guy and he gets what I'm planning
+                      long-term. I've been working with a bunch of different pros and never got very far, but Doug is on
+                      a whole different level.
+                      <br />
+                      It's not often you make a partnership as good as this, and I know that having Doug on my team will
+                      give me a huge advantage over my competitors."
+                    </div>
+                    <div className="kind-words-author">Ben Wilde at SoundSauce - Grammy Nominated Music Mastering</div>
+                  </div>
+                  {/* Two */}
+                  <div className="kind-words-item">
+                    <div className="kind-words-quote">
+                      "Doug has been a lifesaver. Our business has grown rapidly, far outgrowing my own ecommerce
+                      knowledge - Doug stepped in seamlessly, giving us sound advice and made positive changes that will
+                      ensure our business is built on strong foundations. I have worked in the advertising industry for
+                      over 20 years and have worked with may 'Digital Experts', Doug knows exactly what he is doing and
+                      the correct elements to implement to help your business grow.
+                      <br /> I couldn't recommend him highly enough."
+                    </div>
+                    <div className="kind-words-author">Fran Cusden - The Beeswax Wrap Co.</div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
+        {/* Blog  Posts */}
+        {/* <section className="posts-section">
+          <Grid fluid>
+            <Row>
+              <Col xs={12} md={5} className="subtitle-sidebar">
+                <h3 className="list-item">Latest Posts</h3>
+              </Col>
+              <Col xs={12} md mdOffset={1}>
+                <div className="post-grid">
+                  <div className="post-item">
+                    <span className="highlight"> Google Ads Hacks CTR That Work</span>
+                    <p>
+                      Grab a look under the hood to find out what's really possible with Google Ads and a little
+                      JavaScript.
+                    </p>
+                    <p>12.06.20</p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </section> */}
+      </div>
     </Layout>
   )
 }

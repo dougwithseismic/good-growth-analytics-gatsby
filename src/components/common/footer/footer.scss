@@ -1,0 +1,121 @@
+@media only screen {
+  .footer-section {
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 120px;
+  }
+
+  .footer-upper {
+    background-color: red;
+    width: 100%;
+    min-height: 240px;
+  }
+
+  .footer-lower {
+    background-color: black;
+    width: 100%;
+    min-height: 240px;
+  }
+
+  .footer-section .container {
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+
+    .footer-cta {
+      position: absolute;
+      top: -120px;
+      background-color: #fff;
+      color: black;
+      padding: 1em;
+
+      text-align: center;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      .cta-bubble-main {
+        background-color: black;
+        color: white;
+        &:before {
+          background-color: black;
+        }
+      }
+    }
+
+    .footer-content {
+      width: 100%;
+
+      .footer-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 3em;
+
+        .footer-item {
+          margin-bottom: 1em;
+        }
+      }
+
+      .footer-extra-links {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+} /* Define mobile styles - Mobile First */
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) {
+  .footer-section .container {
+    .footer-cta {
+      max-width: 320px;
+      padding: 2em;
+    }
+
+    .footer-content {
+      width: 100%;
+
+      .footer-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .footer-extra-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 0.75em;
+        margin-top: 2em;
+
+        span {
+          padding: 1em;
+        }
+      }
+    }
+  }
+} /* min-width 641px, medium screens */
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) {
+} /* min-width 1025px, large screens */
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) {
+} /* min-width 1441px, xlarge screens */
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) {
+} /* min-width 1921px, xlarge screens */

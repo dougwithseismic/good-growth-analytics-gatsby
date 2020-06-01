@@ -110,17 +110,7 @@ module.exports = {
         // Defaults to null
         defaultDataLayer: { platform: 'gatsby' },
       },
-    },
-    {
-      resolve: 'gatsby-plugin-crisp-chat',
-      options: {
-        websiteId: `3c16ec30-b119-4575-b02e-621c130628fe`,
-        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
-        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
-        enableImprovedAccessibility: true, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
-      },
-    },
-
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

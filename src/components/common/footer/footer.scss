@@ -35,6 +35,7 @@
     .footer-cta {
       position: absolute;
       top: -120px;
+      left: 0;
       background-color: #fff;
       color: black;
       padding: 1em;
@@ -83,6 +84,8 @@
 @media only screen and (min-width: 40.063em) {
   .footer-section .container {
     .footer-cta {
+      left: inherit;
+
       max-width: 320px;
       padding: 2em;
     }

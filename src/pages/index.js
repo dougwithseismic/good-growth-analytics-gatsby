@@ -4,6 +4,8 @@ import SEO from './../components/seo'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import ClientGrid from '../components/clientGrid'
+
 import { Grid, Row, Col } from 'react-flexbox-grid'
 
 import './home.scss'
@@ -91,6 +93,8 @@ const IndexPage = () => {
             </Row>
           </Grid>
         </section>
+        <ClientGrid title="Some of the companies I've helped.."/>
+
         <section className="about-section">
           <Grid fluid>
             <Row>

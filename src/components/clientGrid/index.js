@@ -2,7 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 
- import './clientGrid.scss'
+import './clientGrid.scss'
 
 const ClientGrid = ({ title }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ const ClientGrid = ({ title }) => {
           <div className="client-logo-grid">
             {data.allFile.nodes.map((image) => (
               <div className="client-logo">
-                <Img className="logo" fluid={image.childImageSharp.fluid} alt="Client Logos" />
+                <Img className="logo" fluid={image.childImageSharp.fluid} alt="Client Logos" loading="lazy" />
               </div>
             ))}
           </div>

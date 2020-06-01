@@ -1,8 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import Layout from './../components/layout'
 import SEO from './../components/seo'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 import ClientGrid from '../components/clientGrid'
 
@@ -83,6 +81,7 @@ const IndexPage = () => {
                   <a
                     href="https://calendly.com/doug-withseismic/quick-catchup"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="cta-bubble-main"
                   >
                     Get a call in the calendar

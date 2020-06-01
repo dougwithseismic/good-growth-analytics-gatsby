@@ -8,11 +8,20 @@ const Footer = (props) => {
       <div className="container">
         <div className="footer-cta">
           <h2>Shall we?</h2>
-          <p>If your gut feeling is that I'd be able to help you get to where you need to be, a casual chat is all that's needed.</p>
+          <p>
+            If your gut feeling is that I'd be able to help you get to where you need to be, a casual chat is all that's
+            needed.
+          </p>
           <div className="cta-bubble">
-            <a href="https://linkedin.com/in/dougsilkstone" className="cta-bubble-main">
-              Connect on LinkedIn
+            <a
+              href="https://calendly.com/doug-withseismic/quick-catchup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-bubble-main"
+            >
+              Book a call in the calendar
             </a>
+            <div className="cta-bubble-extra">⟶ No commitment, no cost, no problem</div>
           </div>
         </div>
         <div className="footer-lower" />
